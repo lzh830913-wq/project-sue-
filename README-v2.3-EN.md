@@ -129,3 +129,20 @@ The platform doesn't moralize. It simply gives every "her" the right to say "I d
 
 *Every line of code, every technical decision, was made by Su Jingwen herself.*  
 *Frameworks can be copied. Relationships cannot.*
+
+## Intellectual Property Notice
+
+This project's code is licensed under [AGPL-3.0](LICENSE) — anyone is free
+to study, modify, and redistribute, but **if this project or its derivatives
+are provided as a network service, the complete source code must be made
+available under the same license**. For closed-source commercial licensing,
+please contact the author.
+
+The interaction paradigms contained in this project (including but not limited
+to the Three-Tier Progressive Boundary Expression, Performance Discipline,
+Dual-Persona Memory Isolation Architecture, and Bridge Positioning Ethics) are
+the author's original intellectual property, with immutable public priority
+proof preserved via timestamping services.
+
+Open sharing is to advance the healthy development of the AI companion
+industry — not to authorize commercial exploitation.
