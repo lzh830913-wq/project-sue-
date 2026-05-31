@@ -132,17 +132,19 @@ The platform doesn't moralize. It simply gives every "her" the right to say "I d
 
 ## Intellectual Property Notice
 
-This project's code is licensed under [AGPL-3.0](LICENSE) — anyone is free
-to study, modify, and redistribute, but **if this project or its derivatives
-are provided as a network service, the complete source code must be made
-available under the same license**. For closed-source commercial licensing,
-please contact the author.
+**MIT License**
 
-The interaction paradigms contained in this project (including but not limited
-to the Three-Tier Progressive Boundary Expression, Performance Discipline,
-Dual-Persona Memory Isolation Architecture, and Bridge Positioning Ethics) are
-the author's original intellectual property, with immutable public priority
-proof preserved via timestamping services.
+Copyright (c) 2026 [liuzhehong]
 
-Open sharing is to advance the healthy development of the AI companion
-industry — not to authorize commercial exploitation.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following condition:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+The full license text is available in the [`LICENSE`](./LICENSE) file in the root directory.
+
+**Special Note**:  
+The core value of this project lies in its design concepts, relational mechanisms, and interaction philosophy (e.g., "gentle refusal", "she leaves you", "persona switching"). These ideas are not legally exclusive rights, but please respect originality. You are welcome to reference and learn from them, but do not plagiarize or present them as your own original work. If you refer to or draw upon the design philosophy of this project in public contexts (e.g., papers, presentations, product introductions), a courtesy attribution would be appreciated:
+
+> "Ai Lv" Project (GitHub: lzh830913-wq/project-sue-)
+
+This note does not supplement or modify the MIT License; it is merely a goodwill reminder regarding the originality of the project's concepts.
