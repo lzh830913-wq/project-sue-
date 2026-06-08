@@ -150,3 +150,4 @@ _创建于 2026-06-05 · GPT建议 + 静雯落地_
   4. skills/memory-review/SKILL.md — 路径从 /root/.openclaw/workspace → /Users/shijunhang/.openclaw-jingwen/workspace
   5. git init 完成，首次提交含111个文件
 6. 补记下午小文session丢失事故 — web端聊天session重启后记录蒸发，暂停试验，对话改走QQ Bot
+7. 边界系统工程化记录 — API content_filter可作硬截断 + 两层边界架构 + 疲倦四维信号待工程化
