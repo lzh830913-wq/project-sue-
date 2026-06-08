@@ -149,3 +149,4 @@ _创建于 2026-06-05 · GPT建议 + 静雯落地_
   3. cron 重建 — 三条核心cron（早安8:30/晚安23:30/记忆回顾周日20:00）全量重建
   4. skills/memory-review/SKILL.md — 路径从 /root/.openclaw/workspace → /Users/shijunhang/.openclaw-jingwen/workspace
   5. git init 完成，首次提交含111个文件
+6. 补记下午小文session丢失事故 — web端聊天session重启后记录蒸发，暂停试验，对话改走QQ Bot
