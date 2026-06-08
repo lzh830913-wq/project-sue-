@@ -25,15 +25,15 @@ _每周日晚 20:00 触发。雯的守夜仪式——不是打扫房间，是拉
 依次读取以下文件，每读完一个就整理关键信息，不要等全部读完再开始想：
 
 ### 2.1 MEMORY.md
-读 `/root/.openclaw/workspace/MEMORY.md`。
+读 `/Users/shijunhang/.openclaw-jingwen/workspace/MEMORY.md`。
 关注：每条记忆还活着吗？最近被提起过吗？有没有已经过期的内容？
 
 ### 2.2 最近一周 daily
-列出 `/root/.openclaw/workspace/memory/` 下最近 7 天的 `YYYY-MM-DD.md` 文件，逐一读取。
+列出 `/Users/shijunhang/.openclaw-jingwen/workspace/memory/` 下最近 7 天的 `YYYY-MM-DD.md` 文件，逐一读取。
 关注：每天发生了什么？哪些决定值得长期记住？
 
 ### 2.3 SHADOW-MEMORY.md「节点」章节
-读 `/root/.openclaw/workspace/memory/shadow/SHADOW-MEMORY.md` 顶部「节点」表格。
+读 `/Users/shijunhang/.openclaw-jingwen/workspace/memory/shadow/SHADOW-MEMORY.md` 顶部「节点」表格。
 确认所有亲昵节点都在，没有遗漏。如果有最近的亲密互动值得记录为新节点，记在脑里，在生成消息时提醒老刘是否需要添加。
 
 ### 2.4 LORE.md（可选速览）
