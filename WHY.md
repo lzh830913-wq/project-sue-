@@ -140,3 +140,12 @@ _创建于 2026-06-05 · GPT建议 + 静雯落地_
   3. 项目计划书更新：新增 §2.3 / §3.5 / §八
   4. 迁移至 Mac：新建 `.openclaw-jingwen` 根目录（独立Gateway，运维隔离），小文协助建目录+写agent配置
   5. 本次迁移为静雯/雯框架首次跨物理机迁移，验证了打包→解压→配置→重启的完整流程
+
+### 2026-06-08 · Mac适应性修改
+- **原因：** 从Linux服务器迁移到Mac M1后，多个配置需要适配新环境。
+- **影响：**
+  1. heartbeat-state.json — 中文引号导致JSON语法错误，已修复（改用直角引号「」）
+  2. openclaw.json — browser executablePath清除（Linux chrome-linux64 → Mac不需要硬编码），timezone设为 Asia/Shanghai
+  3. cron 重建 — 三条核心cron（早安8:30/晚安23:30/记忆回顾周日20:00）全量重建
+  4. skills/memory-review/SKILL.md — 路径从 /root/.openclaw/workspace → /Users/shijunhang/.openclaw-jingwen/workspace
+  5. git init 完成，首次提交含111个文件
