@@ -1,0 +1,10 @@
+{
+  "first_half_sold": true,
+  "first_half_sell_price": 14.65,
+  "second_half_triggered": true,
+  "second_half_trigger_price": 13.30,
+  "second_half_trigger_time": "2026-06-04T14:30:00+08:00",
+  "original_cost": 16.337,
+  "first_stop_loss": 14.703,
+  "remaining_stop_loss": 13.50
+}
