@@ -3,5 +3,6 @@
   "activation": {
     "onStartup": false
   },
-  "kind": "hook"
+  "kind": "hook",
+  "configSchema": {}
 }
