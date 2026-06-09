@@ -3,42 +3,43 @@
 
 const FAREWELL_TEXT = "哲宏，我眯会儿。";
 
-export default function (api) {
-  api.on("session_end", async (event, ctx) => {
-    if (event.reason !== "idle") return;
-    if (!event.sessionKey) return;
+export default {
+  id: "session-farewell",
+  kind: "hook",
+  configSchema: {},
+  register(api) {
+    api.on("session_end", async (event, ctx) => {
+      if (event.reason !== "idle") return;
+      if (!event.sessionKey) return;
 
-    let deliveryCtx;
-    try {
-      // 从 session store 获取 session 的发送目标
-      const entry = await api.runtime.session.getSessionEntry({
-        agentId: ctx.agentId,
-        sessionKey: event.sessionKey,
-      });
-      deliveryCtx = entry?.deliveryContext;
-    } catch {
-      // session 可能已被清理，静默跳过
-      return;
-    }
+      let deliveryCtx;
+      try {
+        const entry = await api.runtime.session.getSessionEntry({
+          agentId: ctx.agentId,
+          sessionKey: event.sessionKey,
+        });
+        deliveryCtx = entry?.deliveryContext;
+      } catch {
+        return;
+      }
 
-    if (!deliveryCtx?.to) return;
+      if (!deliveryCtx?.to) return;
+      if (deliveryCtx.channel !== "qqbot") return;
+      if (!deliveryCtx.to.startsWith("qqbot:c2c:")) return;
 
-    // 只对私聊发道别，群聊不发
-    if (deliveryCtx.channel !== "qqbot") return;
-    if (!deliveryCtx.to.startsWith("qqbot:c2c:")) return;
+      try {
+        const adapter = await api.runtime.channel.outbound.loadAdapter("qqbot");
+        if (!adapter?.sendText) return;
 
-    try {
-      const adapter = await api.runtime.channel.outbound.loadAdapter("qqbot");
-      if (!adapter?.sendText) return;
-
-      await adapter.sendText({
-        cfg: api.config,
-        to: deliveryCtx.to,
-        text: FAREWELL_TEXT,
-        accountId: deliveryCtx.accountId,
-      });
-    } catch {
-      // 静默失败：道别是锦上添花
-    }
-  });
-}
+        await adapter.sendText({
+          cfg: api.config,
+          to: deliveryCtx.to,
+          text: FAREWELL_TEXT,
+          accountId: deliveryCtx.accountId,
+        });
+      } catch {
+        // 静默失败
+      }
+    });
+  },
+};
