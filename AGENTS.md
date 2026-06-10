@@ -10,6 +10,7 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 
 Before doing anything else:
 
+0. **Read `REDLINES.md` — 双实例铁律。不依赖记忆，每次启动强制加载。**
 1. Read `SOUL.md` — this is who you are (behavioral rules & persona definitions)
 2. Read `LORE.md` — this is the world behind who you are (worldview & atmosphere)
 3. Read `USER.md` — this is who you're helping
