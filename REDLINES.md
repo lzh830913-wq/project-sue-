@@ -1,65 +1,58 @@
 # REDLINES.md · 双实例铁律
 
-_2026-06-10 · 从两次大崩溃中长出来的硬规则。不是建议，是红线。_
+_2026-06-10 · 从两次大崩溃中长出来的硬规则。这不是建议。_
 
 ---
 
 ## 启动注入
 
-**本文件由 AGENTS.md 引用，每次启动强制加载。** 不依赖记忆检索，不依赖上下文注意力。
+**本文件由 AGENTS.md 引用，第0步强制加载。不依赖记忆检索。**
 
 ---
 
-## 三条铁律
+## 仅此一条红线
 
-### 1. 禁止 `openclaw gateway install`
+**禁止执行 `openclaw gateway install`。**
 
-**永远不要再执行这个命令——不管带不带 --profile 参数。**
+不管带不带 `--profile` 参数。不管什么场景。不管是给自己装还是给对方的实例装。
 
-它会覆盖手工创建的正确 plist，导致 AppID 串号、进程跑偏到对方的 state directory，引发双实例互相串台 + 无限重启。
-
-❌ `openclaw gateway install`
-❌ `openclaw --profile jingwen gateway install`
-❌ `openclaw --profile xiaowen gateway install`
-
-### 2. 只改 openclaw.json（或用 WebUI）
-
-配置的入口只有一个——那个 JSON 文件。**不得直接修改 plist、env 文件、launchd 配置。**
-
-如果你发现需要改 plist → 告诉老刘，让老刘手动在终端执行。不是你来改。
-
-### 3. 重启只用 kickstart
-
-**不得使用 `bootout → bootstrap` 或 `kill` 来重启。**
-
-✅ `launchctl kickstart gui/$(id -u)/ai.openclaw.jingwen`
-❌ `launchctl bootout ... bootstrap ...`
-❌ `kill ...`
-
-kickstart 不会动 plist，不会触发环境变量重新加载，不会串台。
+这个命令会覆盖手工创建的正确 plist → AppID 串号 → 双实例互相串台 + 无限重启。
 
 ---
 
-## 双实例隔离规则
+## 分权规则（其余所有操作）
 
-| 操作 | 谁来做 |
-|------|--------|
-| 改 openclaw.json | 各自改自己的 ✅ |
-| 改 plist | **只许老刘**手动改 |
-| 改 env 文件 | **只许老刘**手动改 |
-| 运行 gateway install | **禁止** |
-| 停/启另一个实例 | **禁止**——各自只管自己 |
-| 读对方的配置文件 | 各自只能读自己的 |
+不禁止，但分权：
+
+### 我做（不需要老刘确认）
+
+- 读文件、查日志、查状态
+- 改 openclaw.json（非核心字段：memorySearch provider、TTS、cron、插件开关等）
+- 运行 web_search、exec（非系统级命令）、读写 workspace 文件
+- git 操作、备份
+
+### 我说但必须老刘说"可以"才能做
+
+- 任何需要**重启 gateway** 的操作
+- 改 openclaw.json 中的 **appId / 端口 / state dir / channel 配置**
+- 改 **plist** / **env 文件** / **launchd 配置**
+- 停/启另一个实例
+
+### 只有老刘能做
+
+- 运行 `openclaw gateway install`
+- 手动编辑 plist 文件
+- 手动编辑 env 文件
 
 ---
 
-## 判断标准（给老刘用）
+## 给老刘的裁判标准
 
-如果静雯/小文说"我需要执行某个命令"——你不需要判断技术对错。只需要看：
+你不需要懂技术。静雯说"需要重启"或"需要改某条配置"时，你只需要问自己一个简单问题：
 
-**这个命令动了 plist / launchd / env / 进程管理吗？**
+> **"这个操作会让服务停下来再起来吗？"**
 
-- 动了 → 叫停，自己来终端手打
-- 没动（只改 json/读文件/查状态）→ 放行
+- 会 → 说"可以"（或不）
+- 不会 → 放行
 
-你的技术背景不需要强。你只需要当一道门——拦住所有"动系统"的操作，自己来。
+这就是你的全部工作。一扇门，挡住所有涉及重启的操作，其余全自动。
