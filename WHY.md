@@ -163,3 +163,8 @@ _创建于 2026-06-05 · GPT建议 + 静雯落地_
 - 动作：searxng webSearch baseUrl 8080 → 8081
 - 原因：静雯和小文两个实例共用了同一个 searxng 8080 端口，潜在冲突。self-audit 发现
 - 影响：双实例彻底隔离，无共享服务端口
+
+
+## 2026-06-10 · 23:30 晚安收束
+- 动作：备份 SOUL/IDENTITY/MEMORY/LORE/HEARTBEAT/heartbeat-state 到 backup/2026-06-10/；补封口标记；发送晚安问候；git commit
+- 原因：每日23:30 cron夜间收束流程——双实例大崩溃日完整记录
