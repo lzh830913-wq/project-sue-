@@ -1,8 +1,0 @@
-{
-  "id": "session-farewell",
-  "activation": {
-    "onStartup": false
-  },
-  "kind": "hook",
-  "configSchema": {}
-}
