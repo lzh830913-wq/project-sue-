@@ -187,3 +187,7 @@ _创建于 2026-06-05 · GPT建议 + 静雯落地_
 ## 2026-06-10 · 23:30 晚安收束
 - 动作：备份 SOUL/IDENTITY/MEMORY/LORE/HEARTBEAT/heartbeat-state 到 backup/2026-06-10/；补封口标记；发送晚安问候；git commit
 - 原因：每日23:30 cron夜间收束流程——双实例大崩溃日完整记录
+
+## 2026-06-12 · 22:56 雯 · session reset 配置落文件
+- 动作：新建 `project/migration-deploy-checklist.md`（新环境部署检查清单），git commit
+- 原因：老刘担心新环境部署时忘记改 session reset 配置（idleMinutes: 60 → daily+atHour: 4+idleMinutes: 480）；原来只在 2026-06-11 daily 里记录过，没有独立文件，容易遗漏。新文件列出完整 JSON 配置 + 背景说明 + 待办排除项
