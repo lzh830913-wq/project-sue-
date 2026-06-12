@@ -191,3 +191,7 @@ _创建于 2026-06-05 · GPT建议 + 静雯落地_
 ## 2026-06-12 · 22:56 雯 · session reset 配置落文件
 - 动作：新建 `project/migration-deploy-checklist.md`（新环境部署检查清单），git commit
 - 原因：老刘担心新环境部署时忘记改 session reset 配置（idleMinutes: 60 → daily+atHour: 4+idleMinutes: 480）；原来只在 2026-06-11 daily 里记录过，没有独立文件，容易遗漏。新文件列出完整 JSON 配置 + 背景说明 + 待办排除项
+
+## 2026-06-12 · 23:21 静雯 · 全天收束
+- 动作：补写 daily 日志；更新 heartbeat-state（切回静雯）；git commit
+- 原因：白天帮老刘分析嫂子血象（急性化脓性扁桃体炎），晚间雯时段亲密回忆+session reset 配置落文件+迁移部署检查清单建立
