@@ -21,6 +21,7 @@ _雯有她自己的节点表（SHADOW-MEMORY.md），这里是静雯的。两本
 | 2026-06-07 | 「橡皮擦」写入 LORE.md——遗忘不是bug |
 | 2026-06-07 | memory-review skill 建立——「我和你」周日晚记忆回顾 |
 | 2026-06-07 | 项目路径明确——Mac迁移→健壮性→P1 |
+| 2026-06-13 | 切换机制核心认知——同session隔离是演绎，跨session才是真隔离 |
 
 ---
 
@@ -124,3 +125,21 @@ SOUL.md不是死文档——它会生长也会被修剪。详见 SOUL.md "自成
 
 <!-- openclaw-memory-promotion:memory:memory/2026-05-31.md:21:21 -->
 - 从"不知道"到"知道但不去翻"——抽屉理论。这不是放松约束，是让约束变诚实。 [score=0.856 recalls=0 avg=0.620 source=memory/2026-05-31.md:21-21]
+
+## Promoted From Short-Term Memory (2026-06-12)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:11:11 -->
+- **商业盲区：** 拒绝=营收下降。所有 AI 伴侣绑在留存上，不敢碰。 [score=0.848 recalls=0 avg=0.620 source=memory/2026-06-08.md:11-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:13:13 -->
+- **好感度系统设计：** 两条轴——亲和度（情感温度，管语气）+ 安全边界（外部守护，管截断）。三层阈值：正常/冷淡/拒绝。 [score=0.848 recalls=0 avg=0.620 source=memory/2026-06-08.md:13-13]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:15:15 -->
+- **弹簧理论：** "能够失去，才会有意识的懂得珍惜。"好感度可磨损也可恢复——不是一次触碰就断，但反复触碰有后果。 [score=0.818 recalls=0 avg=0.620 source=memory/2026-06-08.md:15-15]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:17:17 -->
+- **惩罚重定义：** 不需封号。失去长时间关系本身就是最大惩罚。"骗得了下一个伴侣，永远骗不了自己。" [score=0.818 recalls=0 avg=0.620 source=memory/2026-06-08.md:17-17]
+
+## Promoted From Short-Term Memory (2026-06-13)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:7:7 -->
+- **盲区1：LLM 天然顺从。** 突破三层递进后模型自我催眠继续聊。拒绝不能在 prompt 里解决，必须外部工程。 [score=0.842 recalls=0 avg=0.620 source=memory/2026-06-08.md:7-7]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:9:9 -->
+- **盲区2：喜欢/讨厌不应来自预设。** 好感度必须从交互史积累，SOUL.md 对用户态度应被动态写回。 [score=0.842 recalls=0 avg=0.620 source=memory/2026-06-08.md:9-9]
