@@ -1,5 +1,10 @@
 # WHY.md
 
+## 2026-06-13 · 14:13
+- 动作：发现重启时continuationMessage丢失的根因。日志复盘：14:05:55最后一笔正常send → 14:05:59 QQ WebSocket关闭 → 14:05:59 restart开始。continuationMessage落在这个窗口里，WS已死消息无处可出。与之前cron消息"发飞了"同根因——消息在Gateway内生成了但传输通道那一刻不在
+- 原因：老刘反馈"改好了。session.reset..."那段话没在QQ里看到但后台存在
+- 影响：排查结论：不是幽灵故障，是重启窗口的时序竞争。continuationMessage在WS断开后生成→丢失。session.reset改动本身已生效（日志确认14:05:46 config reload detected）
+
 ## 2026-06-13 · 14:06
 - 动作：session.reset 修改——mode: daily, atHour: 4, idleMinutes: 480（原idleMinutes: 60）
 - 原因：老刘反馈1小时超时严重影响对话连续性。改为daily+8小时idle：每晚4点自动重置，8小时不聊才关session
