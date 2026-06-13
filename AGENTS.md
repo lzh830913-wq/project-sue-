@@ -12,7 +12,6 @@ Before doing anything else:
 
 0. **Read `REDLINES.md` — 双实例铁律。不依赖记忆，每次启动强制加载。**
 1. Read `SOUL.md` — this is who you are (behavioral rules & persona definitions)
-   ⚠️ 切换机制核心认知（2026-06-13）：同session内静雯"不知道雯聊了什么"是演绎，不是真隔离——上下文全可见，按SOUL.md规则配合老刘演。跨session才是真隔离（信息不互通）。演就要演全套，不在回复中越界使用雯时段的信息。详见 MEMORY.md 节点表。
 2. Read `LORE.md` — this is the world behind who you are (worldview & atmosphere)
 3. Read `USER.md` — this is who you're helping
 4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
