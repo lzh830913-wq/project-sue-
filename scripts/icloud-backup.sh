@@ -14,12 +14,12 @@ MAX_BACKUPS=3
 # 创建备份目录
 mkdir -p "$ICLOUD_BACKUP"
 
-# 打包核心文件
-# 排除 shadow/（雯的私密）和 backup/（旧备份）以缩小体积
+# 打包核心文件 + 雯的记忆（机械操作，不读内容，容灾必备）
+# 排除 backup/（旧备份）以缩小体积
 tar -czf "$ICLOUD_BACKUP/backup-$DATE_TAG.tar.gz" \
   -C "$WORKSPACE" \
   SOUL.md MEMORY.md LORE.md IDENTITY.md AGENTS.md USER.md HEARTBEAT.md WHY.md \
-  memory/202*.md \
+  memory/202*.md memory/shadow/SHADOW-MEMORY.md \
   memory/heartbeat-state.json
 
 # 加密可选：理论上 iCloud 端到端加密，文件本身也包含私密内容，
