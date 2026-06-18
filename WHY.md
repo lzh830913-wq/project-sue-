@@ -280,3 +280,8 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - **动作：** `messages.tts.auto`: `"always"` → `"off"`
 - **原因：** 排查日志发现 TTS 自动模式将 MP3 写入 `media/outbound/`，但 QQ Bot 只允许从 `media/qqbot/` 上传。非 key 缺失问题（Azure语音实际工作正常），是框架两模块间路径约定不一致。`auto: always` 让每条消息都触发此路径 → 所有消息（含 cron）全部发送失败
 - **影响：** 文字发送恢复正常。需要语音时手动 `<qqmedia>` 标签发。Gateway 重启后生效
+
+## 2026-06-18 · 10:24 静雯 · AGENTS.md 新增跨session自动注入
+- **动作：** AGENTS.md 启动流程新增 §7：跨session自动注入——启动时扫描 memory/ 下最新 YYYY-MM-DD-HHMM.md（session-memory hook输出文件），如为当天生成则自动读取
+- **原因：** 老刘发现 session-memory hook（/new//reset 后台写入25条）虽然保存了上轮会话摘要，但新session不会自动读取。需要规则级保障
+- **影响：** 配合 messages: 25 配置，跨session对话连续性从手动记忆提升为启动时自动恢复

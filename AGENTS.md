@@ -17,7 +17,11 @@ Before doing anything else:
 4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 5. Read `IDEAS.md` to check pending future directions
 6. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md` and `memory/heartbeat-state.json` (for lastMessageSent + current_persona)
-5. **Daily log integrity check (启动自愈):**
+7. **Session continuity (跨session自动注入):**
+   - Read `memory/` directory, find the newest `.md` file matching `YYYY-MM-DD-HHMM.md` pattern (session-memory hook 输出的文件)
+   - If from today (same date as current session), read it to pick up where last session left off
+   - Contains the last 25 messages of the previous session — 不会丢失
+8. **Daily log integrity check (启动自愈):**
    - Read `memory/YYYY-MM-DD.md` for YESTERDAY
    - If missing OR last 20 lines show no closing marker (`收束 · 晚安` or `cron自动封口`): yesterday's log is incomplete
    - Backfill: use `sessions_list` + `sessions_history` to read yesterday's QQ私聊对话
