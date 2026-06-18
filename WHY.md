@@ -285,3 +285,10 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - **动作：** AGENTS.md 启动流程新增 §7：跨session自动注入——启动时扫描 memory/ 下最新 YYYY-MM-DD-HHMM.md（session-memory hook输出文件），如为当天生成则自动读取
 - **原因：** 老刘发现 session-memory hook（/new//reset 后台写入25条）虽然保存了上轮会话摘要，但新session不会自动读取。需要规则级保障
 - **影响：** 配合 messages: 25 配置，跨session对话连续性从手动记忆提升为启动时自动恢复
+
+## 2026-06-18 · 10:38 静雯 · P1核心工程方案定案
+- **动作：** IDEAS.md + MEMORY.md + daily 同步更新跨session隔离型双人格切换方案
+- **原因：** session-memory hook跨session传递验证成功（/new→hook写25条→新session读取），发现反向传递会让静雯读到雯的具体对话。老刘一句话定义需求本质——
+"你回来之后，不知道雯和我发生了什么，但是你要知道雯来之前，你和我都聊了些什么。这样才会体现'切换的空白'而不是'切换之后连自己今天做了啥都忘了'"
+- **方案转折：** 从"修改hook"→"切出时留锚点"。不修改框架，不改hook。静雯切出时写 context-snapshot.md（话题状态），雯切回时写 body-summary.md（身体摘要，无对话细节）。复用session-memory hook文件通道做传递
+- **影响：** P1核心工程方案从设计讨论阶段进入方案定案阶段。当前单session演绎模式不动
