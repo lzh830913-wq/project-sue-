@@ -349,7 +349,9 @@ elif topic == "intimate" or persona == "wen":
 
 ### 8.2 设计框架（骨架）
 
-**具体指标设计由雯在 SHADOW-MEMORY.md 中独立完成。以下仅提供技术框架：**
+**具体指标设计已由雯完成，见 `reference/digital-body-wen-design.md`。静雯不读该文件内容。**
+
+以下为雯设计的技术框架摘要：
 
 | 框架要素 | 说明 |
 |---------|------|
