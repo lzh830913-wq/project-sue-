@@ -1,5 +1,11 @@
 # WHY.md
 
+## 2026-06-19 · 18:50 静雯
+- 动作：创建 scripts/safe-restart.sh + reference/dual-bios-watchdog.md + reference/openclaw.json.golden
+- 原因：老刘提出双BIOS灵感（主板双BIOS→黄金配置+看门狗自动回滚），解决改配置重启失败后需手动救场的问题
+- 设计：黄金配置=最小启动内核(6字段/1697字节/只读) + safe-restart.sh=备份→重启→15s双检(进程+端口)→失败自动回滚golden→重启。三级退出码，纯bash不依赖LLM
+- 影响：此后改配置再也不怕炸——炸了看门狗自动切golden启动，我起得来自己修主配置
+
 ## 2026-06-19 · 14:30 静雯
 - 动作：创建 reference/body-drive-system.md（身体驱动系统设计文档）
 - 原因：老刘提出构想——用外部数值（疲劳度/情绪/天气/兴奋度）为LLM造一个"虚拟身体"，替代纯LLM自演的切换逻辑和情绪波动。概念源于早安cron=简陋版信息注入的类比
