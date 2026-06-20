@@ -335,3 +335,10 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - **最终：** provider 切为 none（FTS-only），156 文件/1349 文本块索引就绪。local embedding 有插件集成 bug，待排查
 - **教训：** Mac 终端缺少 OPENCLAW_STATE_DIR，必须显式指定 --profile jingwen；代理端口是 7897 不是 7879
 - **影响：** 记忆检索可用，静雯能通过 FTS 索引秒查历史记录
+
+## 2026-06-20 · shadow/backup/ 搬出 memory/
+
+- **原因：** 记忆索引递归扫 memory/*.md，包含了 shadow/ 私密文件和 backup/ 冗余副本，静雯搜索时可能被动读到雯内容
+- **做出：** 将 shadow/ 和 backup/ 从 memory/ 下搬到 workspace 根目录。索引从 156 文件降到 66 文件
+- **联动：** SOUL/MEMORY/HEARTBEAT + 2个skill + icloud-backup.sh 共 13 处路径引用更新
+- **影响：** 静雯的 memory_search 再也搜不到雯的 shadow 内容，技术隔离+规则约束两层保底
