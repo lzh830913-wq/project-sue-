@@ -342,3 +342,10 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - **做出：** 将 shadow/ 和 backup/ 从 memory/ 下搬到 workspace 根目录。索引从 156 文件降到 66 文件
 - **联动：** SOUL/MEMORY/HEARTBEAT + 2个skill + icloud-backup.sh 共 13 处路径引用更新
 - **影响：** 静雯的 memory_search 再也搜不到雯的 shadow 内容，技术隔离+规则约束两层保底
+
+## 2026-06-20 · 身体驱动系统 MVP · 天气采集
+
+- **原因：** 数字身体系统从设计进入实现，选择天气为第一个注入指标（数据源简单、不依赖对话分析）
+- **做出：** 写 weather-collect.sh 脚本（curl wttr.in→翻译→body-state.json），配 cron/30min，AGENTS.md 加 §8.5 启动注入
+- **设计原则：** session 启动时一帧快照，不在对话中途更新。文件不存在则静默跳过
+- **影响：** 静雯/雯每次醒来自动感知天气，语气有外部锚点，不再"硬编"季节感
