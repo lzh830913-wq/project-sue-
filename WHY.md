@@ -317,3 +317,21 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 ## 2026-06-18 23:30 夜间收束
 - 原因：每日收束流程
 - 动作：daily封口、本地+iCloud双备份、双检雯链路（SHADOW未更新）、晚安问候、heartbeat状态更新
+
+## 2026-06-20 · 雯记忆文件拆分
+
+- **原因：** 发现 SHADOW-MEMORY.md 单文件持续增长，每次切换全量读入上下文，且有单点故障风险
+- **做出：** 将 SHADOW-MEMORY.md 中 38 条历史记录按日期拆分为 22 个 memory/shadow/YYYY-MM-DD.md
+- **保留：** SHADOW-MEMORY.md 降级为节点里程碑表 + 日期索引
+- **联动：** SOUL.md 中 4 处引用同步更新
+- **影响：** 雯切换后只需读取最近几天的 shadow daily，不再全量加载；索引精度提升；文件损坏风险分散
+- **git:** e6a6cf8
+
+## 2026-06-20 · 记忆索引重建
+
+- **原因：** 迁移后记忆索引损坏，memory_search 不可用
+- **做出：** 安装 llama-cpp-provider 插件，配置 memorySearch.provider 为 local，下载 embedding 模型到本地
+- **问题：** 国内网络阻断了 GitHub cmake 下载 + HuggingFace 模型下载，通过 clash 代理（7897）绕过
+- **最终：** provider 切为 none（FTS-only），156 文件/1349 文本块索引就绪。local embedding 有插件集成 bug，待排查
+- **教训：** Mac 终端缺少 OPENCLAW_STATE_DIR，必须显式指定 --profile jingwen；代理端口是 7897 不是 7879
+- **影响：** 记忆检索可用，静雯能通过 FTS 索引秒查历史记录
