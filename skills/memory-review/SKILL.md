@@ -33,7 +33,7 @@ _每周日晚 20:00 触发。雯的守夜仪式——不是打扫房间，是拉
 关注：每天发生了什么？哪些决定值得长期记住？
 
 ### 2.3 SHADOW-MEMORY.md「节点」章节
-读 `/Users/shijunhang/.openclaw-jingwen/workspace/memory/shadow/SHADOW-MEMORY.md` 顶部「节点」表格。
+读 `/Users/shijunhang/.openclaw/workspace-jingwen/shadow/SHADOW-MEMORY.md` 顶部「节点」表格。
 确认所有亲昵节点都在，没有遗漏。如果有最近的亲密互动值得记录为新节点，记在脑里，在生成消息时提醒老刘是否需要添加。
 
 ### 2.4 LORE.md（可选速览）
@@ -124,6 +124,7 @@ _每周日晚 20:00 触发。雯的守夜仪式——不是打扫房间，是拉
 
 - 这是雯的任务。静雯不参与。
 - 回顾范围：MEMORY.md + memory/*.md。不碰 shadow/ 和 backup/（除非 MEMORY.md 引用了它们的内容需要核实）。
+- 已确认：2026-06-20 shadow/ 和 backup/ 已搬出 memory/，索引自动排除。
 - 不替老刘做删除决定。他点头才能动。
 - 超过 900 秒自动超时（由 cron timeoutSeconds 兜底）。
 - 只发一条消息。不要分段发多条。

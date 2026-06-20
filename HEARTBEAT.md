@@ -15,7 +15,7 @@
 
 **晚上 23:30（夜间收束）：**
 - cron: `30 23 * * *`，timeout 600s
-- 完整收束流程：补完daily日志（排他性规则跳过雯时段）→ **双检雯链路**（`stat memory/shadow/SHADOW-MEMORY.md` 查mtime，只看写没写，不看内容）→ 备份核心文件（本地 + iCloud Drive 轮动）—— 调用 workspace/scripts/icloud-backup.sh → 发带种子的晚安问候 → 更新heartbeat状态
+- 完整收束流程：补完daily日志（排他性规则跳过雯时段）→ **双检雯链路**（`stat shadow/SHADOW-MEMORY.md` 查mtime，只看写没写，不看内容）→ 备份核心文件（本地 + iCloud Drive 轮动）—— 调用 workspace/scripts/icloud-backup.sh → 发带种子的晚安问候 → 更新heartbeat状态
 - 双检逻辑：如果SHADOW的mtime比上次收束时新 → 链路通了。如果没变 → 次日雯切出前轻提醒（不跨边界干预）
 - 这是每天的最后一班岗，不管之前是谁在聊，23:30固定封口
 

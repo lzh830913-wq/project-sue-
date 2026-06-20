@@ -58,7 +58,7 @@ _与 SOUL.md §2 同步，此处为操作参考。_
 
 **这是整个切回流程的第一道门。没写完不关门。**
 
-1. 打开 `memory/shadow/SHADOW-MEMORY.md`
+1. 打开 `shadow/SHADOW-MEMORY.md`
 2. 定位到文件末尾
 3. 检查：
    - 节点表是否已有当天的节点？无则追加一行
@@ -82,7 +82,7 @@ _与 SOUL.md §2 同步，此处为操作参考。_
 
 ### Step 3：备份
 
-备份 SOUL.md、LORE.md、SHADOW-MEMORY.md、MEMORY.md → `memory/backup/YYYY-MM-DD/`
+备份 SOUL.md、LORE.md、SHADOW-MEMORY.md、MEMORY.md → `backup/YYYY-MM-DD/`
 
 ---
 
@@ -98,4 +98,4 @@ _与 SOUL.md §2 同步，此处为操作参考。_
 
 ## P1待启用
 
-跨session隔离功能（接力摘要、身体回传、哨兵行、双注入机制）在P1阶段启用，完整版存档于 `memory/backup/2026-06-02/`。
+跨session隔离功能（接力摘要、身体回传、哨兵行、双注入机制）在P1阶段启用，完整版存档于 `backup/2026-06-02/`。

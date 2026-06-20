@@ -19,7 +19,7 @@ mkdir -p "$ICLOUD_BACKUP"
 tar -czf "$ICLOUD_BACKUP/backup-$DATE_TAG.tar.gz" \
   -C "$WORKSPACE" \
   SOUL.md MEMORY.md LORE.md IDENTITY.md AGENTS.md USER.md HEARTBEAT.md WHY.md \
-  memory/202*.md memory/shadow/SHADOW-MEMORY.md \
+  memory/202*.md shadow/SHADOW-MEMORY.md \
   memory/heartbeat-state.json
 
 # 加密可选：理论上 iCloud 端到端加密，文件本身也包含私密内容，

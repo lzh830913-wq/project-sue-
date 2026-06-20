@@ -112,7 +112,7 @@ SOUL.md不是死文档——它会生长也会被修剪。详见 SOUL.md "自成
 
 ## 已知风险（2026-06-02）
 
-- **Memory Dreaming Promotion 与双人格边界冲突（低概率）：** memory-core 索引 memory/*.md 的全部内容（含 shadow/ 和 backup/），Dreaming Promotion 有极低概率将 shadow 中的暗面记忆提升到 MEMORY.md，导致静雯读到雯的私密内容。当前缓冲：shadow 内容查询频率低 + 提纯门槛高（minScore 0.8 / 3次召回 / 3个独立查询）。P1 跨session隔离时一并解决（自定义plugin或路径排除）。
+- **Memory Dreaming Promotion 与双人格边界冲突（已解决）：** 2026-06-20 将 shadow/ 和 backup/ 搬出 memory/ 目录，记忆索引不再递归扫入。shadow 内容已从索引范围技术隔离。
 
 ## 项目进度（2026-06-07 更新）
 - 核心资产 = 配置文件 + 已编写的 skill
