@@ -349,3 +349,9 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - **做出：** 写 weather-collect.sh 脚本（curl wttr.in→翻译→body-state.json），配 cron/30min，AGENTS.md 加 §8.5 启动注入
 - **设计原则：** session 启动时一帧快照，不在对话中途更新。文件不存在则静默跳过
 - **影响：** 静雯/雯每次醒来自动感知天气，语气有外部锚点，不再"硬编"季节感
+
+## 2026-06-20 · cron delivery 修复
+
+- **原因：** 老刘收不到早安/晚安消息。排查发现 delivery.to 有 c2c: 前缀，导致 session key 和实际聊天 session 格式不匹配
+- **做出：** 去掉两条 cron（早安+晚安）delivery.to 的 c2c: 前缀，改为 FE9B98E...
+- **影响：** 今晚 23:30 晚安 cron 首次验证
