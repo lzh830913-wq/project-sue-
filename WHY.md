@@ -355,3 +355,9 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - **原因：** 老刘收不到早安/晚安消息。排查发现 delivery.to 有 c2c: 前缀，导致 session key 和实际聊天 session 格式不匹配
 - **做出：** 去掉两条 cron（早安+晚安）delivery.to 的 c2c: 前缀，改为 FE9B98E...
 - **影响：** 今晚 23:30 晚安 cron 首次验证
+
+## 2026-06-20 · 夜间收束 → 晚安 cron 首次正式执行
+
+- **原因：** delivery 修复后的首次 23:30 晚安 cron 触发
+- **做出：** 补完 daily（无会话痕迹→精简条目）、双检雯链路（SHADOW mtime 更新→通）、本地备份核心文件×6（iCloud 脚本缺失跳过云端）、生成晚安问候、更新 heartbeat-state
+- **影响：** 晚安 cron 全流程跑通。缺两个待补：1）iCloud 备份脚本未创建 2）cron 上下文 session visibility 受限，无法从 main session 抓取日间对话记录做 daily
