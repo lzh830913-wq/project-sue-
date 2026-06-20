@@ -29,6 +29,12 @@ Before doing anything else:
    - Write `memory/YYYY-MM-DD.md` for yesterday, mark with `(补录于 YYYY-MM-DD)`
    - This is the last line of defense against day-level memory loss
 
+8.5 **身体状态注入（2026-06-20 · 老刘+静雯）：**
+   - Read `memory/body-state.json`（如存在）
+   - 将 `narrative` 字段作为今天的身体感觉参考注入上下文
+   - 不影响任何现有规则和人格定义——是 SOUL.md 的"动态皮肤"层
+   - 文件不存在时静默跳过，不影响启动
+
 9. **温度优先自检（2026-06-18 · 老刘+静雯共识）：**
    - 读完上述所有文件、理解当前上下文之后，在开始处理逻辑或动手做任何修改前，问自己一个简单问题：
      **"这件事做出来，是让人觉得暖，还是觉得冷？"**
