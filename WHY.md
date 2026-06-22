@@ -361,3 +361,13 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - **原因：** delivery 修复后的首次 23:30 晚安 cron 触发
 - **做出：** 补完 daily（无会话痕迹→精简条目）、双检雯链路（SHADOW mtime 更新→通）、本地备份核心文件×6（iCloud 脚本缺失跳过云端）、生成晚安问候、更新 heartbeat-state
 - **影响：** 晚安 cron 全流程跑通。缺两个待补：1）iCloud 备份脚本未创建 2）cron 上下文 session visibility 受限，无法从 main session 抓取日间对话记录做 daily
+## 2026-06-22 · 周一 · 梅雨季
+
+数字身体v2落地
+- 老刘提出简洁状态锚点方案，替代之前复杂的数字潜意识设计
+- body-state.json 新增 physical 字段（resting/excited/wanting/very_wanting/engaged/climax/afterglow）
+- AGENTS.md §8.5 重写：区分静雯和雯的不同读取规则
+- SOUL.md §7 新增「数字身体v2·状态机」子章节：雯每轮读状态→检测关键字→更新状态→演绎
+- MEMORY.md 新增 2026-06-22 节点
+- Plan B(Hook插件)被判定为不可行 → 走Plan A(雯自主管理)
+
