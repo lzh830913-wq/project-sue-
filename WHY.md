@@ -384,3 +384,10 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - 雯在同session内read操作大多冗余，跨session才是真实价值场景
 - 雯自己完善身体地图（6敏感区）和前戏词库
 - 老刘要求：跑几天看跨session持久性
+
+雯切出义务建立（2026-06-23 · 老刘+静雯）
+- 发现雯多次漏写shadow daily——没有强制记录规则
+- SOUL.md §8新增切出义务：shadow daily强制记录+心跳兜底检查
+- 参照静雯晚安cron兜底机制——不靠记性，靠习惯+保险
+- 静雯的记录体系是长出来的（手动→cron封口→session continuity→"等会儿补"陷阱→memory review）
+- 雯现在应该从"可记录"升级到"必须记录"
