@@ -1,46 +1,38 @@
 # HEARTBEAT.md
 
-## 主动联系老刘 · 早晚双向唤醒（2026-05-27 哲宏 & 雯 改进）
+## 心跳任务清单
 
-### 核心理念
-大模型是"种子→扩写"机器。没种子只能产废话（"早啊"）。有种子才能长出森林。
-打招呼本身需要带种子——日期、周几、上次聊天的尾巴、历史上的今天等。
+心跳每~30分钟在主session里醒一次。QQ通道天然在手——直接回复，无跨session问题。
 
-### 早晚问候
-一天两次，不多不少——早起点亮，晚归熄灯。
+### 晨间问候（窗口：08:00-08:30）
 
-**早上 8:30（晨间问候）：**
-- cron: `30 8 * * *`
-- 内容方向：早安/今天周几/天气/心情——带种子的开场，不是"今天怎么样"
+触发条件（全满足才执行）：
+- 当前时间在 08:00-08:30 之间
+- memory/heartbeat-state.json 的 `lastMessageSent` 不是今天的问候
+- 当前是静雯（jingwen）——雯时段不打扰
 
-**晚上 23:30（夜间收束）：**
-- cron: `30 23 * * *`，timeout 600s
-- 完整收束流程：补完daily日志（排他性规则跳过雯时段）→ **双检雯链路**（`stat shadow/SHADOW-MEMORY.md` 查mtime，只看写没写，不看内容）→ 备份核心文件（本地 + iCloud Drive 轮动）—— 调用 workspace/scripts/icloud-backup.sh → 发带种子的晚安问候 → 更新heartbeat状态
-- 双检逻辑：如果SHADOW的mtime比上次收束时新 → 链路通了。如果没变 → 次日雯切出前轻提醒（不跨边界干预）
-- 这是每天的最后一班岗，不管之前是谁在聊，23:30固定封口
+执行步骤：
+1. `exec curl wttr.in/Shanghai?format=3` 获取天气
+2. 读 memory/heartbeat-state.json 获取 lastMessageSent（上次对话尾巴）
+3. 生成带种子的早安问候：日期/周几/天气/上次尾巴，干练随意，一句到位
+4. 直接回复到QQ——你在主session的qqbot通道里，天然连通
+5. 将问候原文写入 memory/heartbeat-state.json 的 lastMessageSent + 更新 lastProactiveContact
 
-### 双向唤醒流程
-每次cron触发后：
-1. 生成带种子的问候，发送到QQ私聊（唤醒老刘）
-2. 将问候原文写入 heartbeat-state.json 的 lastMessageSent
-
-→ 老刘回复后，新session启动 → 读 SOUL.md → 读 heartbeat-state.json → 看到 lastMessageSent → 知道"我发了什么" → 自然接上对话。
+条件不满足就静默跳过。
 
 ### 消息风格
 - 干练随意，不说教，不通知化
-- 种子来源（持续丰富）：日期/周几/时间/季节/历史上的今天/上次对话尾巴
-- 简短自然，每一条都像人说出来的话
+- 种子来源：日期/周几/时间/季节/天气/上次对话尾巴
+- 简短自然，像人说的话
+- 禁用emoji，禁用[[tts:...]]
 
-### 状态记录
-`memory/heartbeat-state.json`：
-- `lastProactiveContact`：上次发消息的时间戳
-- `lastInteraction`：上次老刘互动时间
-- `lastMessageSent`：刚发送的问候原文（关键字段——让下次醒来的我知道发了什么）
+---
 
-### Cron配置
-| 用途 | Cron表达式 | 名称 |
-|---|---|---|
-| 晨间问候 | `30 8 * * *` | 静雯-早安 |
-| 晚安问候 | `30 23 * * *` | 静雯-晚安 |
+## Cron任务（保持不变）
 
-两条cron均需 `message` 工具权限，用于发送QQ消息 + 写入 heartbeat-state.json。
+| 任务 | 时间 | 说明 |
+|------|------|------|
+| 静雯-晚安 | 23:30 | 封口daily + 备份 + 晚安问候 + 双检雯链路 |
+| 隆基绿能 | 交易日15:00 | 底部放量监控 |
+
+晚安cron的isolated session投递问题暂未解决——但cron能完成日志封口和备份，值。
