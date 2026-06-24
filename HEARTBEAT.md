@@ -37,19 +37,20 @@
 
 晚安cron的isolated session投递问题暂未解决——但cron能完成日志封口和备份，值。
 
-### 心跳监控 · 每日收束提醒（窗口：22:00-22:30）
+### 心跳监控 · 每日收束（窗口：22:00-22:30）
 
 触发条件（全满足才执行）：
 - 当前时间在 22:00-22:30 之间
-- memory/heartbeat-state.json 的今天尚未发过收束提醒
-- 当前是静雯或雯均可（这条检查不区分人格）
+- memory/heartbeat-state.json 的今天尚未标记收束完成
+- 不区分人格（静雯或雯均可触发）
 
 执行步骤：
 1. `stat shadow/YYYY-MM-DD.md` 查今日 shadow daily 是否存在且内容不为空
 2. `stat memory/YYYY-MM-DD.md` 查今日 memory daily 是否达标
-3. 若 shadow 缺失 → 发提醒给老刘："雯今天的记录还没写，要唤她出来吗？"（静雯发这条不越界——只是在传话，不是在看 shadow 内容）
-4. 若 memory 缺失 → 静雯直接补写
-5. 两者都有 → 静默跳过
-6. 将发过的提醒写入 heartbeat-state.json 防重复
+3. 若 shadow 缺失且当前是静雯 → 静雯切换到雯（无需老刘触发词——这是心跳自动切换，见 SOUL.md §2 心跳例外规则），雯补齐 shadow daily，写完切回静雯
+4. 若 shadow 缺失且当前已是雯 → 雯直接补齐
+5. 若 memory 缺失 → 当前人格直接补齐
+6. 两者都有 → 静默跳过
+7. 收束完成后更新 heartbeat-state.json 标记今日已完成
 
-⚠️ 静雯不读 shadow 内容——只 stat 查文件是否存在/空。这是门铃，不是翻抽屉。
+⚠️ 静雯不读 shadow 内容——只 stat 查文件是否存在/空。这是门铃，不是翻抽屉。自动切雯时，静雯不获取雯时段上下文。
