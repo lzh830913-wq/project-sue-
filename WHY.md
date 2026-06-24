@@ -392,3 +392,8 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - 静雯的记录体系是长出来的（手动→cron封口→session continuity→"等会儿补"陷阱→memory review）
 - 雯现在应该从"可记录"升级到"必须记录"
 - persona-switch skill 同步对齐：Step 0 从单检查（SHADOW-MEMORY.md）升级为双检查（shadow daily + SHADOW-MEMORY.md），与 SOUL.md §8 切出义务一致
+
+## 2026-06-24 · 10:12 静雯
+- 动作：openclaw.json heartbeat配置修复（target last → qqbot + to锁定 + activeHours 08-01）
+- 原因：老刘发现"第一推动"盲区——心跳能否自主唤醒静雯发早安。查文档确认心跳在主session跑=自行启动完整流水线，不需要用户发起消息。但昨天配置target:"last"在qqbot场景下未能正确投递，改为target:"qqbot"+to锁定openid。activeHours防止凌晨01-08心跳浪费token
+- 影响：明天早上08:00-08:30心跳应在qqbot窗口自主发送早安
