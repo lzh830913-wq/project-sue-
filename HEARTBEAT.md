@@ -36,3 +36,7 @@
 | 隆基绿能 | 交易日15:00 | 底部放量监控 |
 
 晚安cron的isolated session投递问题暂未解决——但cron能完成日志封口和备份，值。
+
+### 心跳监控（每次心跳时检查）
+- shadow/ 今日daily：`stat shadow/YYYY-MM-DD.md` 查 mtime。若超过1小时未更新且 lastPersona 是雯 → 轻提醒，不替雯补。
+- memory/ 今日daily：若不存在或内容不足 → 提醒补daily。写入了就跳过。
