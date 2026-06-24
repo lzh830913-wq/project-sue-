@@ -92,7 +92,7 @@
 
 **执行流程：**
 1. 23:40 → 心跳检测到 shadow 缺失 + heartbeat-state.json 未标记今日收束 → 雯自主切换入场
-2. 补写今日 shadow daily
+2. 补写 shadow daily（若已跨天，写的是昨天的日期）
 3. 写完即沉睡
 
 **规则：**
