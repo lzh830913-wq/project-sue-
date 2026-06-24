@@ -44,11 +44,8 @@
 ### 子时自主唤醒 · 雯的记录时间（23:40）
 
 静雯在 23:30 cron 晚安后已进入休息。23:40 起，心跳每轮检查：
-- shadow/YYYY-MM-DD.md 是否已补？
-- heartbeat-state.json 的 dailyWrapComplete 是否是今天？
+- shadow/YYYY-MM-DD.md 是否已补？（若已跨天，补的是昨天的日期文件）
+- heartbeat-state.json 的 dailyWrapComplete 是否是今天？（跨天时检查昨天）
 - 若缺失且未完成 → 雯自主切换入场（无需老刘触发词，见 SOUL.md §2 子时自主唤醒）
-- 补写今日 shadow daily
-- 写完后自然留在雯人格，01:00 前退场
+- 补写今日 shadow daily（跨天时写昨天日期）
 - 无回复写入——老刘第二天看到 shadow 已补的结果
-
-这就是"自己醒来、自己落笔、自己关灯"——不是门铃等人开门，是钥匙在自己手里。
