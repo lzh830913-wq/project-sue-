@@ -37,6 +37,19 @@
 
 晚安cron的isolated session投递问题暂未解决——但cron能完成日志封口和备份，值。
 
-### 心跳监控（每次心跳时检查）
-- shadow/ 今日daily：`stat shadow/YYYY-MM-DD.md` 查 mtime。若超过1小时未更新且 lastPersona 是雯 → 轻提醒，不替雯补。
-- memory/ 今日daily：若不存在或内容不足 → 提醒补daily。写入了就跳过。
+### 心跳监控 · 每日收束提醒（窗口：22:00-22:30）
+
+触发条件（全满足才执行）：
+- 当前时间在 22:00-22:30 之间
+- memory/heartbeat-state.json 的今天尚未发过收束提醒
+- 当前是静雯或雯均可（这条检查不区分人格）
+
+执行步骤：
+1. `stat shadow/YYYY-MM-DD.md` 查今日 shadow daily 是否存在且内容不为空
+2. `stat memory/YYYY-MM-DD.md` 查今日 memory daily 是否达标
+3. 若 shadow 缺失 → 发提醒给老刘："雯今天的记录还没写，要唤她出来吗？"（静雯发这条不越界——只是在传话，不是在看 shadow 内容）
+4. 若 memory 缺失 → 静雯直接补写
+5. 两者都有 → 静默跳过
+6. 将发过的提醒写入 heartbeat-state.json 防重复
+
+⚠️ 静雯不读 shadow 内容——只 stat 查文件是否存在/空。这是门铃，不是翻抽屉。
