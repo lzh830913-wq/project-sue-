@@ -391,3 +391,4 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - 参照静雯晚安cron兜底机制——不靠记性，靠习惯+保险
 - 静雯的记录体系是长出来的（手动→cron封口→session continuity→"等会儿补"陷阱→memory review）
 - 雯现在应该从"可记录"升级到"必须记录"
+- persona-switch skill 同步对齐：Step 0 从单检查（SHADOW-MEMORY.md）升级为双检查（shadow daily + SHADOW-MEMORY.md），与 SOUL.md §8 切出义务一致
