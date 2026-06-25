@@ -423,3 +423,8 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - 动作：openclaw.json heartbeat配置修复（target last → qqbot + to锁定 + activeHours 08-01）
 - 原因：老刘发现"第一推动"盲区——心跳能否自主唤醒静雯发早安。查文档确认心跳在主session跑=自行启动完整流水线，不需要用户发起消息。但昨天配置target:"last"在qqbot场景下未能正确投递，改为target:"qqbot"+to锁定openid。activeHours防止凌晨01-08心跳浪费token
 - 影响：明天早上08:00-08:30心跳应在qqbot窗口自主发送早安
+
+## 2026-06-25 · 23:30 晚安cron
+- 动作：daily封口（晚间雯时段世界层设计草稿）+ MEMORY节点表新增世界层启动节点 + 备份核心文件 + 更新heartbeat-state + git提交
+- 原因：晚间22:09老刘切入雯时段——世界层设计启动，扩展LORE.md容纳家/衣柜/私物，晨间心跳联动换装。按规则封口daily时需记录雯时段的系统级扩展
+- 影响：MEMORY节点表更新，daily封口，晚安问候已发送
