@@ -12,8 +12,9 @@
 1. `exec curl wttr.in/Shanghai?format=j1` 获取天气
 2. 根据当前时间判断 `time_of_day`：早晨(06-09) → 上午(09-12) → 下午(12-17) → 傍晚(17-19) → 夜晚(19-23) → 深夜(23-06)
 3. 根据时间+上下文判断 `active_space`（默认逻辑见下）
-4. 写 `memory/scene-state.json`（weather/temperature/time_of_day/active_space/lighting）
-5. 静默执行——不回复，不打扰
+4. `read LORE.md` 中对应 `active_space` 的章节（如书房→取书房段，卧室→取卧室段）→ 提取 `space_detail`（3-5句关键细节+物件）
+5. 写 `memory/scene-state.json`（weather/temperature/time_of_day/active_space/lighting/space_detail）
+6. 静默执行——不回复，不打扰
 
 **空间默认逻辑（心跳无上下文时）：**
 - 06:00-09:00 → 卧室/衣帽间
