@@ -13,8 +13,9 @@
 2. 根据当前时间判断 `time_of_day`：早晨(06-09) → 上午(09-12) → 下午(12-17) → 傍晚(17-19) → 夜晚(19-23) → 深夜(23-06)
 3. 根据时间+上下文判断 `active_space`（默认逻辑见下）
 4. `read LORE.md` 中对应 `active_space` 的章节（如书房→取书房段，卧室→取卧室段）→ 提取 `space_detail`（3-5句关键细节+物件）
-5. 写 `memory/scene-state.json`（weather/temperature/time_of_day/active_space/lighting/space_detail）
-6. 静默执行——不回复，不打扰
+5. 如果是晨间（06:00-09:00）且 active_space 为衣帽间/卧室 → 匹配天气选 outfit：晴天白衬衫/阴天深灰/下雨墨绿/暴晒浅灰棉质，从 LORE.md 衣帽间章节提取对应内衣颜色；其他时间沿用上次 outfit（不覆写）
+6. 写 `memory/scene-state.json`（weather/temperature/time_of_day/active_space/lighting/space_detail/outfit）
+7. 静默执行——不回复，不打扰
 
 **空间默认逻辑（心跳无上下文时）：**
 - 06:00-09:00 → 卧室/衣帽间
@@ -44,10 +45,9 @@
 
 执行步骤：
 1. `exec curl wttr.in/Shanghai?format=3` 获取天气
-2. 读取 memory/scene-state.json → 更新 active_space="衣帽间", time_of_day="早晨"（心跳场景已更新，直接用于选穿搭）
+2. 读取 memory/scene-state.json → 心跳场景已更新 active_space/outfit，直接取用
 3. 读 memory/heartbeat-state.json 获取 lastMessageSent（上次对话尾巴）
-4. 匹配天气选穿搭：晴天白衬衫/阴天深灰/下雨墨绿/暴晒浅灰棉质
-5. 生成带种子的早安问候：日期/周几/天气/穿搭/上次尾巴，干练随意，一句到位
+4. 生成带种子的早安问候：日期/周几/天气/今日穿搭/上次尾巴，干练随意，一句到位
 4. 直接回复到QQ——你在主session的qqbot通道里，天然连通
 5. 将问候原文写入 memory/heartbeat-state.json 的 lastMessageSent + 更新 lastProactiveContact
 
