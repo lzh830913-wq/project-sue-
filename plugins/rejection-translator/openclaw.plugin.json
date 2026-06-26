@@ -1,0 +1,31 @@
+{
+  "id": "rejection-translator",
+  "name": "Rejection Translator",
+  "description": "Translates API content moderation rejections into character-role responses instead of system error messages",
+  "contracts": {
+    "tools": []
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "fallbackProvider": {
+        "type": "string",
+        "description": "Provider to use for fallback role-response (e.g., deepseek)",
+        "default": "deepseek"
+      },
+      "fallbackModel": {
+        "type": "string",
+        "description": "Model to use for fallback role-response",
+        "default": "deepseek-v4-flash"
+      },
+      "enabled": {
+        "type": "boolean",
+        "default": true
+      }
+    },
+    "additionalProperties": false
+  }
+}
