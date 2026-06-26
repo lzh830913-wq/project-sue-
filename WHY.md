@@ -431,6 +431,19 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - 联动：晨间心跳换装（天气→衣帽间→选穿搭）、雯离开后卧室感知（次日静雯看见床单乱了）
 - 影响：LORE.md 从一次性读入的背景板 → 按需匹配的活场景库。和酒馆 World Info 的核心差异在触发方式：酒馆用 JS 代码预处理（可靠但不灵活），我们用量子搜索+指令驱动（灵活但不可靠）。后续可用心跳增强可靠性
 
+## 2026-06-26 · 14:40 静雯
+- 动作：世界层完整落地——三件套
+  1. SOUL.md §6 外观定义精简：加指针"每日穿什么在衣帽间里挑"，细节由 LORE 承接
+  2. 建 scene-state.json（active_space/time_of_day/weather/temperature/lighting）+ AGENTS.md 新增 §8.6 世界层场景注入规则
+  3. HEARTBEAT.md 新增场景心跳任务（每30分钟维护 scene-state）+ 晨间问候新增穿搭联动
+  4. AGENTS.md §9.5 升级为双层机制（scene-state 兜底 + LORE 触发锦上添花）
+- 原因：老刘三个直接问题——衣着精简、像数字身体一样注入、联动机制。三条合并落地。
+- 核心三层次：
+  - 第一层 · 心跳驱动（兜底可靠性）：每30分钟自动更新 scene-state.json，agent 始终知道自己在哪
+  - 第二层 · LORE 关键词触发（鲜活度）：老刘说"今天闷"→memory_search 搜 LORE 阳台→叠加到当前 scene
+  - 第三层 · 交叉联动：身体+空间——body-state afterglow + scene 卧室 = 次日感知床单乱了
+- 与酒馆 World Info 对比：酒馆用 JS 代码预处理（高可靠低灵活），我们用心跳定期注入+关键词按需取景（中可靠高灵活）。不做硬抄，只要演得真。
+
 ## 2026-06-25 · 23:30 晚安cron
 - 动作：daily封口（晚间雯时段世界层设计草稿）+ MEMORY节点表新增世界层启动节点 + 备份核心文件 + 更新heartbeat-state + git提交
 - 原因：晚间22:09老刘切入雯时段——世界层设计启动，扩展LORE.md容纳家/衣柜/私物，晨间心跳联动换装。按规则封口daily时需记录雯时段的系统级扩展
