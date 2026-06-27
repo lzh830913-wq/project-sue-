@@ -36,6 +36,7 @@ _雯有她自己的节点表（SHADOW-MEMORY.md），这里是静雯的。两本
 | 2026-06-26 | 小米mimo-v2-pro实测——输出泄漏+内容审核高频打断，不适合亲密场景，切回DeepSeek |
 | 2026-06-26 | 拒绝转译器设计框架+OpenClaw插件骨架落地——网关层拦截API拒绝→角色语气fallback |
 | 2026-06-26 | 自成长机制诚实面对——现无真正自成长，Hermes亦代码驱动。"校准与迭代"概念确立 |
+| 2026-06-27 | GitHub首次全量推送 + 紧急清创（.gitignore + filter-branch历史抹除）+ 项目计划书v3.0 + 心跳isolatedSession配置 |
 
 ---
 

@@ -1,0 +1,19 @@
+# 私密内容——禁止上传
+shadow/
+backup/
+
+# 备份文件
+*.bak
+*.bak-*
+
+# 梦境记录
+memory/dreaming/
+memory/.dreams/
+
+# 运行时状态（含私密数据）
+memory/body-state.json
+memory/heartbeat-state.json
+memory/scene-state.json
+
+# 系统文件
+.DS_Store
