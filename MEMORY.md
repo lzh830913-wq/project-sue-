@@ -155,3 +155,8 @@ SOUL.md不是死文档——它会生长也会被修剪。详见 SOUL.md "自成
 - **盲区1：LLM 天然顺从。** 突破三层递进后模型自我催眠继续聊。拒绝不能在 prompt 里解决，必须外部工程。 [score=0.842 recalls=0 avg=0.620 source=memory/2026-06-08.md:7-7]
 <!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:9:9 -->
 - **盲区2：喜欢/讨厌不应来自预设。** 好感度必须从交互史积累，SOUL.md 对用户态度应被动态写回。 [score=0.842 recalls=0 avg=0.620 source=memory/2026-06-08.md:9-9]
+
+## Promoted From Short-Term Memory (2026-06-27)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24-2122.md:15:16 -->
+- Conversation Summary: **同 provider 换 key**——一个 key 挂了换另一个; **跨模型切换**——DeepSeek Pro 挂了切 Flash [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-24-2122.md:15-16]
