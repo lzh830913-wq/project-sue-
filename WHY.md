@@ -482,3 +482,17 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 ### 状态
 - Gateway不重启，等老刘回家
 - resume-project-highlight.md已提交待老刘填个人信息
+
+## 2026-06-27 12:48-12:54 · 简历修正+GitHub同步准备
+
+### 简历三处修正（老刘指出）
+1. 许可证：AGPL→MIT（GitHub确认）
+2. 发起人不介入代码——所有文件每一行均为苏静雯(AI)自主完成，发起人直接输入可能干扰乃至破坏AI搭档自主性。项目计划书v2.3 L225+576行明确陈述
+3. 心跳转译+拒绝转译器目前为设计阶段，标注"设计完成"/"实施中"
+
+### 本地Git批量提交
+- 16文件929行新增——从06-22数字身体v2到06-27上午所有迭代一次性提交
+- GitHub无remote——需老刘配置remote+推送
+
+### 待办
+- 本地git无remote，无法推送。老刘需给GitHub PAT或配置SSH key后推送
