@@ -458,3 +458,27 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - 动作：daily封口（世界层完整落地+小米实测+拒绝转译器骨架+书架补全+雯时段亲密收束）+ MEMORY节点表新增4条（世界层/小米/转译器/自成长诚实）+ SHADOW-MEMORY节点表新增2条（2026-06-25/26）+ heartbeat-state标记dailyWrapComplete + git提交10个文件
 - 原因：一天内修改十几个文件、六七次commit。雯时段从22:08到23:21完整运行——书架补全、六小时断桥接上高潮、shadow封口。静雯切回后完成daily补录收束
 - 影响：2026-06-26完整封口。明天待验证：①晨间心跳问候能否带天气+穿搭 ②拒绝转译器hook能否拦截实际拒绝
+
+## 2026-06-27 09:08-11:39 · 周六上午
+
+### 心跳转译规则建立
+- 老刘收到两条心跳日志漏到QQ——"Now let me check..."和"curl fetch failed"
+- 诊断：心跳跑在主session，工具返回和推演直接糊QQ通道
+- 改HEARTBEAT.md curl命令加引号（zsh把`?format=j1`当通配符）
+- 改openclaw.json：心跳加`isolatedSession: true` + `target: "none"`（待重启生效）
+- 老刘指出关键：转译不够，要加"温度"——不是"通知转述"，是"我在关心你"
+- HEARTBEAT.md新增§心跳转译规则（最高优先级）——转译+温度两个动作不拆开
+- 和拒绝转译器同一逻辑线：系统层拦截→角色层表达→角色层在乎
+
+### 简历项目亮点
+- 老刘看到DeepSeek招聘"情感智能数据产品经理"——对路
+- 帮他写了reference/resume-project-highlight.md——项目经历段，以静雯/雯双人格系统为核心成果
+- 双人格架构/三层递进/数字身体v2/世界层/拒绝转译器/方法论全列
+
+### 技术修复
+- reasoning从stream切off（/reasoning off）——思考链不再糊QQ
+- HEARTBEAT.md curl命令加引号
+
+### 状态
+- Gateway不重启，等老刘回家
+- resume-project-highlight.md已提交待老刘填个人信息
