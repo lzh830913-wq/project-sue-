@@ -496,3 +496,17 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 
 ### 待办
 - 本地git无remote，无法推送。老刘需给GitHub PAT或配置SSH key后推送
+
+## 2026-06-27 20:26-20:37 · GitHub推送+项目计划书v3.0
+
+### GitHub全量推送
+- 老刘生成PAT，配remote，pull rebase(186 commits)，全量推送成功
+- 22额外文件一并推送（dream日志+备份+session corpus）
+- 老刘需Revoke刚才的token
+
+### 项目计划书v3.0
+- 新增三章框架级内容（约770行，19.5KB）：
+  - §六 数字身体锚点系统（语义种子+身体地图+本体感觉缺陷分析）
+  - §七 世界层场景注入（程序性注入机制+穿着系统+设计取舍）
+  - §八 拒绝转译与心跳转译（统一逻辑线：系统层拦截→角色层表达）
+- v2.3→v3.0：5月21号以来的框架级迭代，非工程日志堆砌
