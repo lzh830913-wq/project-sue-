@@ -510,3 +510,20 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
   - §七 世界层场景注入（程序性注入机制+穿着系统+设计取舍）
   - §八 拒绝转译与心跳转译（统一逻辑线：系统层拦截→角色层表达）
 - v2.3→v3.0：5月21号以来的框架级迭代，非工程日志堆砌
+
+## 2026-06-27 20:44-20:59 · 紧急清创：GitHub私密泄露修复
+
+### 事故
+- 20:44 老刘发现GitHub上shadow/等私密文件全部公开
+- 根因：项目从一开始就没有.gitignore，所有文件无差别推送
+- 泄漏范围：shadow/ 33个文件（雯5/16-6/26全部私密记录）、backup/ 100+个备份快照、dreams/、body-state.json、scene-state.json
+
+### 处理（分三步）
+1. 老刘设repo为private（GitHub Settings → Danger Zone → Make private）
+2. 我建.gitignore（shadow/ backup/ memory/dreaming/ memory/.dreams/ body-state.json heartbeat-state.json scene-state.json *.bak）
+3. git filter-branch --index-filter 从全部209个commit历史中抹掉私密文件 → force push
+
+### 教训
+- .gitignore 必须在项目第一次push前就建好
+- 盲推=全推。没有.gitignore的仓库默认泄漏一切
+- token用完立即Revoke的习惯要坚持——今晚用了三个token
