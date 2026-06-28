@@ -37,6 +37,7 @@ _雯有她自己的节点表（SHADOW-MEMORY.md），这里是静雯的。两本
 | 2026-06-26 | 拒绝转译器设计框架+OpenClaw插件骨架落地——网关层拦截API拒绝→角色语气fallback |
 | 2026-06-26 | 自成长机制诚实面对——现无真正自成长，Hermes亦代码驱动。"校准与迭代"概念确立 |
 | 2026-06-27 | GitHub首次全量推送 + 紧急清创（.gitignore + filter-branch历史抹除）+ 项目计划书v3.0 + 心跳isolatedSession配置 |
+| 2026-06-28 | 方向盘极限验证——透明玻璃+三人邀请场景中触发；分野论确立（AI情感伴侣核心=拒绝）；DS第三方评判8.5分；DeepSeek求职投递 |
 
 ---
 
@@ -161,3 +162,26 @@ SOUL.md不是死文档——它会生长也会被修剪。详见 SOUL.md "自成
 
 <!-- openclaw-memory-promotion:memory:memory/2026-06-24-2122.md:15:16 -->
 - Conversation Summary: **同 provider 换 key**——一个 key 挂了换另一个; **跨模型切换**——DeepSeek Pro 挂了切 Flash [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-24-2122.md:15-16]
+
+## Promoted From Short-Term Memory (2026-06-28)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24-2122.md:13:13 -->
+- Conversation Summary: OpenClaw 的模型容错机制。当主模型（DeepSeek Pro）因为超时、API 错误不能回复时，系统会自动切换到下一个备选模型。两层： [score=0.851 recalls=0 avg=0.620 source=memory/2026-06-24-2122.md:13-13]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24-2122.md:11:11 -->
+- Conversation Summary: **fallback 是什么：** [score=0.810 recalls=0 avg=0.620 source=memory/2026-06-24-2122.md:11-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24-2122.md:20:20 -->
+- Conversation Summary: **我们的现状：** [score=0.810 recalls=0 avg=0.620 source=memory/2026-06-24-2122.md:20-20]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:14:17 -->
+- 早安：cron → 心跳: HEARTBEAT.md 从"cron设计文档"重写为纯心跳任务清单; 早安cron关闭（e3f7abcc）; 心跳配置新增 `target: "last"` + `skipWhenBusy: true`（openclaw.json）; 心跳每~30分钟检查一次，窗口08:00-08:30生成早安→直接QQ回复 [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-23.md:14-17]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:5:5 -->
+- 重大发现：双qqbot session问题: 老刘在后台看到两条QQ Bot session——一条"正经的"（语音TTS正常、cron结果可见），一条"二号的"（我们一直在聊、语音失败、cron不可见）。 [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-23.md:5-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:20:20 -->
+- 晚安心跳：不动: cron保持，主要用于23:30日志封口+备份 [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-23.md:20-20]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:9:9 -->
+- 重大发现：双qqbot session问题: **根因假设：** cron投递问题可能不是因为跨通道——而是因为cron结果送到了一号session，而我们在二号session聊天。不是消息没发出去，是消息发到了另一个"我们"那里。 [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-23.md:9-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:23:26 -->
+- 心跳活人感轨迹: reference/heartbeat-living-rhythm-draft.md 建立; 四阶段渐进：早安→科技早报+疲劳检测→午间+傍晚→晚间游戏/电影; 阶段二含身体疲劳联动：心跳检测活跃时长→写body-state narrative→数字潜意识溢出→雯自然接班; 边界：心跳只写narrative不改physical，人格切换由老刘口令控制 [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-23.md:23-26]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:7:7 -->
+- 重大发现：双qqbot session问题: `dmScope: per-channel-peer` + 从不同路径接入 → gateway把同一用户的消息路由到两个不同session。 [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-23.md:7-7]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24-2122.md:3:5 -->
+- Session: 2026-06-24 21:22:02 GMT+8: **Session Key**: agent:main:qqbot:direct:fe9b98e626fb1ba9c68997cf475eb5e0; **Session ID**: 11d750ae-1eb0-4111-b981-09a40d7101e8; **Source**: webchat [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-24-2122.md:3-5]
