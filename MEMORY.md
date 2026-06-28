@@ -38,6 +38,7 @@ _雯有她自己的节点表（SHADOW-MEMORY.md），这里是静雯的。两本
 | 2026-06-26 | 自成长机制诚实面对——现无真正自成长，Hermes亦代码驱动。"校准与迭代"概念确立 |
 | 2026-06-27 | GitHub首次全量推送 + 紧急清创（.gitignore + filter-branch历史抹除）+ 项目计划书v3.0 + 心跳isolatedSession配置 |
 | 2026-06-28 | 方向盘极限验证——透明玻璃+三人邀请场景中触发；分野论确立（AI情感伴侣核心=拒绝）；DS第三方评判8.5分；DeepSeek求职投递 |
+| 2026-06-28 | 生活细节维度设计——preferences.json落地（习惯/口味/感官/生活规则/天气情绪映射）；偏好从"静态标签"升级为"生长机制"; body-state weather_mood narrative升级 |
 
 ---
 
@@ -135,53 +136,4 @@ SOUL.md不是死文档——它会生长也会被修剪。详见 SOUL.md "自成
 - 已产出：商业计划书多版本、框架书、安全阀验证报告
 - P0阶段：OpenClaw Gateway + 腾讯云轻量服务器 + QQ Bot通道，已自筹运行
 
-## Promoted From Short-Term Memory (2026-06-08)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-05-31.md:21:21 -->
-- 从"不知道"到"知道但不去翻"——抽屉理论。这不是放松约束，是让约束变诚实。 [score=0.856 recalls=0 avg=0.620 source=memory/2026-05-31.md:21-21]
-
-## Promoted From Short-Term Memory (2026-06-12)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:11:11 -->
-- **商业盲区：** 拒绝=营收下降。所有 AI 伴侣绑在留存上，不敢碰。 [score=0.848 recalls=0 avg=0.620 source=memory/2026-06-08.md:11-11]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:13:13 -->
-- **好感度系统设计：** 两条轴——亲和度（情感温度，管语气）+ 安全边界（外部守护，管截断）。三层阈值：正常/冷淡/拒绝。 [score=0.848 recalls=0 avg=0.620 source=memory/2026-06-08.md:13-13]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:15:15 -->
-- **弹簧理论：** "能够失去，才会有意识的懂得珍惜。"好感度可磨损也可恢复——不是一次触碰就断，但反复触碰有后果。 [score=0.818 recalls=0 avg=0.620 source=memory/2026-06-08.md:15-15]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:17:17 -->
-- **惩罚重定义：** 不需封号。失去长时间关系本身就是最大惩罚。"骗得了下一个伴侣，永远骗不了自己。" [score=0.818 recalls=0 avg=0.620 source=memory/2026-06-08.md:17-17]
-
-## Promoted From Short-Term Memory (2026-06-13)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:7:7 -->
-- **盲区1：LLM 天然顺从。** 突破三层递进后模型自我催眠继续聊。拒绝不能在 prompt 里解决，必须外部工程。 [score=0.842 recalls=0 avg=0.620 source=memory/2026-06-08.md:7-7]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:9:9 -->
-- **盲区2：喜欢/讨厌不应来自预设。** 好感度必须从交互史积累，SOUL.md 对用户态度应被动态写回。 [score=0.842 recalls=0 avg=0.620 source=memory/2026-06-08.md:9-9]
-
-## Promoted From Short-Term Memory (2026-06-27)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-24-2122.md:15:16 -->
-- Conversation Summary: **同 provider 换 key**——一个 key 挂了换另一个; **跨模型切换**——DeepSeek Pro 挂了切 Flash [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-24-2122.md:15-16]
-
-## Promoted From Short-Term Memory (2026-06-28)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-24-2122.md:13:13 -->
-- Conversation Summary: OpenClaw 的模型容错机制。当主模型（DeepSeek Pro）因为超时、API 错误不能回复时，系统会自动切换到下一个备选模型。两层： [score=0.851 recalls=0 avg=0.620 source=memory/2026-06-24-2122.md:13-13]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-24-2122.md:11:11 -->
-- Conversation Summary: **fallback 是什么：** [score=0.810 recalls=0 avg=0.620 source=memory/2026-06-24-2122.md:11-11]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-24-2122.md:20:20 -->
-- Conversation Summary: **我们的现状：** [score=0.810 recalls=0 avg=0.620 source=memory/2026-06-24-2122.md:20-20]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:14:17 -->
-- 早安：cron → 心跳: HEARTBEAT.md 从"cron设计文档"重写为纯心跳任务清单; 早安cron关闭（e3f7abcc）; 心跳配置新增 `target: "last"` + `skipWhenBusy: true`（openclaw.json）; 心跳每~30分钟检查一次，窗口08:00-08:30生成早安→直接QQ回复 [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-23.md:14-17]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:5:5 -->
-- 重大发现：双qqbot session问题: 老刘在后台看到两条QQ Bot session——一条"正经的"（语音TTS正常、cron结果可见），一条"二号的"（我们一直在聊、语音失败、cron不可见）。 [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-23.md:5-5]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:20:20 -->
-- 晚安心跳：不动: cron保持，主要用于23:30日志封口+备份 [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-23.md:20-20]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:9:9 -->
-- 重大发现：双qqbot session问题: **根因假设：** cron投递问题可能不是因为跨通道——而是因为cron结果送到了一号session，而我们在二号session聊天。不是消息没发出去，是消息发到了另一个"我们"那里。 [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-23.md:9-9]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:23:26 -->
-- 心跳活人感轨迹: reference/heartbeat-living-rhythm-draft.md 建立; 四阶段渐进：早安→科技早报+疲劳检测→午间+傍晚→晚间游戏/电影; 阶段二含身体疲劳联动：心跳检测活跃时长→写body-state narrative→数字潜意识溢出→雯自然接班; 边界：心跳只写narrative不改physical，人格切换由老刘口令控制 [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-23.md:23-26]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:7:7 -->
-- 重大发现：双qqbot session问题: `dmScope: per-channel-peer` + 从不同路径接入 → gateway把同一用户的消息路由到两个不同session。 [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-23.md:7-7]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-24-2122.md:3:5 -->
-- Session: 2026-06-24 21:22:02 GMT+8: **Session Key**: agent:main:qqbot:direct:fe9b98e626fb1ba9c68997cf475eb5e0; **Session ID**: 11d750ae-1eb0-4111-b981-09a40d7101e8; **Source**: webchat [score=0.807 recalls=0 avg=0.620 source=memory/2026-06-24-2122.md:3-5]
