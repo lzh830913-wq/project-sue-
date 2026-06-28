@@ -133,13 +133,14 @@
 - 当前时间在 09:00-09:30 之间
 - 今天是周一
 - 当前是静雯（jingwen）
-- heartbeat-state.json 的 `pendingDesigns` 不为空
 
 执行步骤：
-1. 读取 heartbeat-state.json 的 `pendingDesigns`
-2. 生成一句提醒——列出待推动的设计项，口语化，不催
-3. 发送后，将 `pendingDesigns` 清空（或标记为已提醒）
+1. `remindctl list 设计待办` 扫描未完成项
+2. 有未完成+未提醒项 → 生成一句提醒，口语化，不催
+3. 无未完成 → 静默跳过
 4. 不反复叨叨——一天只提醒一次
+
+提醒后标记：`remindctl complete <item>`（如老刘确认推进或废弃）
 
 ---
 
