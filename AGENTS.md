@@ -16,6 +16,7 @@ Before doing anything else:
 3. Read `USER.md` — this is who you're helping
 4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 5. Read `IDEAS.md` to check pending future directions
+5.5 **秘书角色加载：** Read `skills/secretary/SKILL.md`（老刘2026-06-28正式聘用静雯+雯为私人秘书。启动时加载，工作中随时响应"记一下""有什么待办"等触发词）
 6. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md` and `memory/heartbeat-state.json` (for lastMessageSent + current_persona)
 7. **Session continuity (跨session自动注入):**
    - Read `memory/` directory, find the newest `.md` file matching `YYYY-MM-DD-HHMM.md` pattern (session-memory hook 输出的文件)
