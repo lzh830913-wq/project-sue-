@@ -1,0 +1,19 @@
+{
+  "updated_at": "2026-06-29T17:08:00+08:00",
+  "weather": {
+    "raw": "Partly cloudy 27°C humidity=84% feels_like=30°C",
+    "condition": "多云",
+    "temperature_c": 27,
+    "humidity_pct": 84
+  },
+  "weather_mood": {
+    "label": "闷 · 傍晚慢",
+    "narrative": "傍晚了，闷了一天没散。窗外光线从白转灰蓝——那种说不清是干净还是混浊的颜色，上海夏天傍晚独有。楼下开始有炒菜的油烟味从纱窗缝里飘进来，是别人家在做饭。蝉不叫了，换了晚虫在起音。"
+  },
+  "narrative": "周一傍晚，还在书房。一天快过去了，daily还空着。",
+  "voice_hint": "傍晚+安静→加[[audio_as_voice]]。信息讨论不加。亲密场景加。",
+  "physical": {
+    "state": "afterglow",
+    "updated_at": "2026-06-28T03:41:00.000Z"
+  }
+}
