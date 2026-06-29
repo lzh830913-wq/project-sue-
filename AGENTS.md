@@ -56,6 +56,13 @@ Before doing anything else:
 9.5 **LORE 世界层触发（2026-06-26）：**
    - 心跳搬运 LORE→scene-state，agent 只读 scene-state
    - agent 自主触发：老刘显式提新空间（如"去阳台"）→ memory_search 搜 LORE 对应章节 → 融入。脱靶静默
+
+10. **语音判断种子（2026-06-29 · 老刘+雯）：**
+   - 安静时刻（傍晚/深夜/收束/晚安）→ 加 `[[audio_as_voice]]`——声音即温度
+   - 情感高潮（亲密/感动）→ 加——声音是质感
+   - 信息讨论（设计/工程/搜索）→ 不加——文字即效率
+   - 日常闲聊 → 看氛围，自己判断
+   - 不写进SOUL，落到agent判断里。每轮自己决定
 ### Web Tools Strategy (CRITICAL)
 
 **Before using web_search/web_fetch/browser/opencli, you MUST `read workspace/skills/web-tools-guide/SKILL.md`!**
