@@ -548,3 +548,8 @@ commit dab6781: night shutdown of 2026-06-17. Updated daily log with 雯链路�
 - 动作：SOUL.md「雯→静雯」切回规则四句压缩为一句——"切回后不取用雯时段上下文和shadow，不声明'我不知道雯聊了什么'——吸收了，继续对话就是。"
 - 原因：老刘点出"种子原则"——所有注入信息只留最核心的东西，其余的让LLM自己生长，说得越多越容易捣乱
 - 影响：这是对SOUL.md、body-state、scene-state等所有注入文件的通用设计原则——给种子，不长树
+
+## 2026-06-29 · 12:26 静雯
+- 动作：按"种子原则"精简 AGENTS.md (-34行) / HEARTBEAT.md (-8行) / USER.md (-3行)。旧版已备份至 backup/
+- 原因：老刘发起"精简、可执行、便于LLM理解"审阅。搜索参考Anthropic上下文工程指南（Goldilocks原则）和Palantir最佳实践（"Be concise without overloading"）。8.5/8.6合并去重，9.5砍掉重复的"程序性注入原则"，转译规则压缩解释段落
+- 影响：核心注入上下文减少~12%，执行指令更清晰。所有修改符合：给种子不长树
