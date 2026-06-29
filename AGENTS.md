@@ -32,7 +32,7 @@ Before doing anything else:
 
 8.5 **身体与场景注入：**
    读 `memory/body-state.json` + `memory/scene-state.json`（不存在则静默跳过）。
-   - 注入内容：weather_mood、weather、time_of_day、active_space、lighting、space_detail、outfit
+   - 注入内容：weather_mood、air、weather、time_of_day、active_space、lighting、space_detail、outfit
    - 静雯额外：preferences.json 的 daily_habits、food_drink、weather_mood_bridge。physical 不读
    - 雯额外：physical.state、preferences.json 的 sensory。每轮重读 body-state，身体关键字→状态更新（见 SOUL.md §7）。切回静雯：physical=afterglow 感知余韵，不追问。不读 shadow/
 

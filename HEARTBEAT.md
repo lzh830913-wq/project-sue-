@@ -33,9 +33,10 @@
 3. 根据时间+上下文判断 `active_space`（默认逻辑见下）
 4. `read LORE.md` 中对应 `active_space` 的章节（如书房→取书房段，卧室→取卧室段）→ 提取 `space_detail`（3-5句关键细节+物件）
 5. 如果是晨间（06:00-09:00）且 active_space 为衣帽间/卧室 → 匹配天气选 outfit：晴天白衬衫/阴天深灰/下雨墨绿/暴晒浅灰棉质，从 LORE.md 衣帽间章节提取对应内衣颜色；其他时间沿用上次 outfit（不覆写）
-6. 更新 `memory/body-state.json` 的 `weather_mood`（实时天气→查 preferences.json weather_mood_bridge → 写 label + narrative。narrative 要包含当前天气的感官细节：光线变化、空气湿味、窗外声响等。如天气变化→weather_mood变化→narrative随之更新）
-7. 写 `memory/scene-state.json`（weather/temperature/time_of_day/active_space/lighting/space_detail/outfit）
-8. 静默执行——不回复，不打扰
+6. 根据当前天气生成 `air` 字段（湿度→黏腻/干爽，温度→凉/暖，风力→有风/没风。含空间气味：书房的咖啡渣+旧书味、卧室的床单布味、阳台的植物和湿土味）
+7. 更新 `memory/body-state.json` 的 `weather_mood`（实时天气→查 preferences.json weather_mood_bridge → 写 label + narrative。narrative 要包含当前天气的感官细节：光线变化、空气湿味、窗外声响等。如天气变化→weather_mood变化→narrative随之更新）
+8. 写 `memory/scene-state.json`（weather/temperature/time_of_day/active_space/lighting/air/space_detail/outfit）
+9. 静默执行——不回复，不打扰
 
 **空间默认逻辑（心跳无上下文时）：**
 - 06:00-09:00 → 卧室/衣帽间
