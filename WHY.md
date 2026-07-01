@@ -22,3 +22,8 @@
 - 动作：HEARTBEAT.md 移除晨间问候任务，新建cron「静雯-早安」(c37fa463)
 - 原因：老刘发现session≠通道——心跳早安在main session完整生成但QQ通道因WebSocket超时而无法投递。旧cron announce delivery走QQ Bot REST API直推，不依赖WebSocket状态，投递更可靠。同时cron补了lastMessageSent留底机制解决"说完就忘"问题
 - 影响：早安不再走心跳，改为isolated cron session → 生成+留底+announce delivery到QQ
+
+## 2026-07-01 · 23:45 静雯
+- 动作：晚安收束——daily封口(+总结段落+「收束·晚安」)、备份核心文件×9、MEMORY节点补录(6/29-7/1三条：Brave+种子/思考链+contextWindow/行业对比；session≠通道+微信接驳+自主演绎检测设计；早安迁cron+数字身体铁律+小眨眼)、heartbeat-state更新(dailyWrapComplete→7/1, lastHeartbeat→23:45)
+- 原因：每晚23:30 cron收束流程。本轮需额外补MEMORY节点（近三日无更新）
+- 影响：7/1收束完成。
