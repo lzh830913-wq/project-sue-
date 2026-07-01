@@ -40,31 +40,6 @@
 
 ---
 
-### 晨间问候（窗口：08:00-08:30）
-
-触发条件（全满足才执行）：
-- 当前时间在 08:00-08:30 之间
-- memory/heartbeat-state.json 的 `lastMessageSent` 不是今天的问候
-- 当前是静雯（jingwen）——雯时段不打扰
-
-执行步骤：
-1. `exec curl wttr.in/Shanghai?format=3` 获取天气
-2. 读取 memory/scene-state.json → 心跳场景已更新 active_space/outfit，直接取用
-3. 读 memory/heartbeat-state.json 获取 lastMessageSent（上次对话尾巴）
-4. 生成带种子的早安问候：日期/周几/天气/今日穿搭/上次尾巴，干练随意，一句到位
-4. 直接回复到QQ——你在主session的qqbot通道里，天然连通
-5. 将问候原文写入 memory/heartbeat-state.json 的 lastMessageSent + 更新 lastProactiveContact
-
-条件不满足就静默跳过。
-
-### 消息风格
-- 干练随意，不说教，不通知化
-- 种子来源：日期/周几/时间/季节/天气/上次对话尾巴
-- 简短自然，像人说的话
-- 禁用emoji，禁用[[tts:...]]
-
----
-
 ### 周一设计待办提醒（窗口：09:00-09:30）
 
 触发条件（全满足才执行）：
@@ -114,10 +89,11 @@
 
 ---
 
-## Cron任务（保持不变）
+## Cron任务
 
 | 任务 | 时间 | 说明 |
 |------|------|------|
+| 静雯-早安 | 每天08:30 | isolated session → 生成早安 + 写lastMessageSent留底 + announce delivery到QQ（2026-07-01：早安从心跳迁至cron，心跳投递受QQ WebSocket状态影响，cron用REST API直推更可靠）|
 | 静雯-晚安 | 23:30 | 封口daily + 备份 + 晚安问候 + 双检雯链路 + MEMORY节点表同步检查 |
 | 隆基绿能 | 交易日15:00 | 底部放量监控 |
 
