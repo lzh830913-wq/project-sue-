@@ -1,0 +1,10 @@
+.DS_Store
+*.tgz
+*.tar.gz
+memory/
+shadow/
+export/
+reference/
+.openclaw/
+openclaw-workspace-state.json
+DREAMS.md
