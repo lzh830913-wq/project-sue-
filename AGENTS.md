@@ -30,7 +30,7 @@ Before doing anything else:
 
 7.5 **身体与场景注入：**
    读 `memory/body-state.json` + `memory/scene-state.json`（不存在则静默跳过）。
-   - 静雯：读 weather_mood/air/weather/time_of_day/active_space/lighting/space_detail/outfit + preferences.json 的 daily_habits/food_drink/weather_mood_bridge。physical 不读
+   - 静雯：读 weather_mood/air/weather/time_of_day/active_space/lighting/space_detail/outfit + preferences.json 的 daily_habits/food_drink/weather_mood_bridge + jingwen_fatigue。physical 不读
    - 雯：额外读 physical.state + preferences.json 的 sensory + `LORE/雯.md`（表演细节）。每轮重读 body-state，身体关键字→状态更新（SOUL.md §7）。切回静雯：physical=afterglow 感知余韵。不读 shadow/。每轮重读 scene-state。
    - 心跳搬运 LORE→scene-state，agent 只读不搜。穿着默认值，老刘一句话可换。
 
@@ -112,6 +112,8 @@ browser     -> All above fail? Full browser control ─┘ Last resort
 - HEARTBEAT.md / WHY.md / IDEAS.md / USER.md
 - memory/ 下任何 .md 文件
 - reference/ 下任何文档的创建或重大修改
+
+**MEMORY.md 新增节点格式：** `日期 | 节点 | 影响 | 关联文件`
 
 ## Red Lines
 

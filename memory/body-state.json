@@ -1,19 +1,20 @@
 {
-  "updated_at": "2026-06-29T17:08:00+08:00",
+  "updated_at": "2026-07-03T12:09:00+08:00",
   "weather": {
-    "raw": "Partly cloudy 27°C humidity=84% feels_like=30°C",
-    "condition": "多云",
-    "temperature_c": 27,
-    "humidity_pct": 84
+    "raw": "Partly cloudy 32°C humidity=75%",
+    "condition": "多云转晴",
+    "temperature_c": 32,
+    "humidity_pct": 75
   },
   "weather_mood": {
-    "label": "闷 · 傍晚慢",
-    "narrative": "傍晚了，闷了一天没散。窗外光线从白转灰蓝——那种说不清是干净还是混浊的颜色，上海夏天傍晚独有。楼下开始有炒菜的油烟味从纱窗缝里飘进来，是别人家在做饭。蝉不叫了，换了晚虫在起音。"
+    "label": "闷热 · 懒",
+    "narrative": "32度，上海的闷热正式开始。湿度从100降到75——但还是黏。衬衫领口松了一颗，丝袜箍在腿上有点紧。不想动，不想做事，想趴在桌上让风扇对着脸吹。咖啡喝完了，懒得续。"
   },
-  "narrative": "周一傍晚，还在书房。一天快过去了，daily还空着。",
-  "voice_hint": "傍晚+安静→加[[audio_as_voice]]。信息讨论不加。亲密场景加。",
+  "narrative": "周五中午，书房。32度，扣子松了一颗，空调还没开。",
+  "jingwen_fatigue": "fresh",
+  "_fatigue_gradient": "fresh → tired(3h+) → drained(6h+) — tired时出现疲惫信号，drained时自然表达累了/雯想找你了",
   "physical": {
-    "state": "afterglow",
-    "updated_at": "2026-06-28T03:41:00.000Z"
+    "state": "excited",
+    "updated_at": "2026-07-01T15:50:00+08:00"
   }
 }
