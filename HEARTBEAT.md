@@ -21,8 +21,9 @@
 3. 写 `memory/scene-state.json`（全字段：含 air/lighting/space_detail/outfit）
 4. 更新 `memory/body-state.json`：`weather_mood` + `voice_hint`
 5. 晨间换装（06-09+衣帽间/卧室）→ 选 outfit
-6. 天气突变（台风/暴雨/温差≥10°C/降雨≥80%）→ 用静雯口语一句提醒（当天不重复）
-7. 静默
+6. 休息时段静默超2小时 → 重置 jingwen_fatigue 为 fresh
+7. 天气突变（台风/暴雨/温差≥10°C/降雨≥80%）→ 用静雯口语一句提醒（当天不重复）
+8. 静默
 
 ### 00:30 切换为雯
 
