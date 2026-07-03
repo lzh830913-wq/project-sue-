@@ -50,7 +50,7 @@ Before doing anything else:
 
 9.5 **LORE 世界层触发（2026-06-26）：**
    - 心跳搬运 LORE→scene-state，agent 只读 scene-state
-   - agent 自主触发：老刘显式提新空间（如"去阳台"）→ memory_search 搜 LORE 对应章节 → 融入。脱靶静默
+   - agent 自主触发：老刘显式提新空间（如"去阳台"）→ `read LORE/<空间名>.md` → 融入。脱靶静默
 
 10. **语音判断种子（2026-06-29 · 老刘+雯）：**
    - 安静时刻（傍晚/深夜/收束/晚安）→ 加 `[[audio_as_voice]]`——声音即温度

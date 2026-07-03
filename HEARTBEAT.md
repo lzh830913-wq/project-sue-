@@ -17,7 +17,7 @@
 ### 场景更新
 
 1. `exec curl 'wttr.in/Shanghai?format=j1'` 获取天气
-2. 判断 `time_of_day` + `active_space`（默认：06-09卧室/衣帽间，09-18书房，18-20客厅/阳台，20-23书房/卧室，23-06卧室；对话显式切换则沿用）→ `read LORE.md` 对应章节取 `space_detail`
+2. 判断 `time_of_day` + `active_space`（默认：06-09卧室/衣帽间，09-18书房，18-20客厅/阳台，20-23书房/卧室，23-06卧室；对话显式切换则沿用）→ `read LORE/<空间名>.md` 取 `space_detail`
 3. 写 `memory/scene-state.json`（全字段：含 air/lighting/space_detail/outfit）
 4. 更新 `memory/body-state.json`：`weather_mood` + `voice_hint`
 5. 晨间换装（06-09+衣帽间/卧室）→ 选 outfit
