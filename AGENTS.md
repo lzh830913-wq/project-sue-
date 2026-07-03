@@ -11,25 +11,24 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 Before doing anything else:
 
 0. **Read `REDLINES.md` — 双实例铁律。不依赖记忆，每次启动强制加载。**
-1. Read `SOUL.md` — this is who you are (behavioral rules & persona definitions)
-2. Read `LORE.md` — this is the world behind who you are (worldview & atmosphere)
-3. Read `USER.md` — this is who you're helping
-4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-5. Read `IDEAS.md` to check pending future directions
-5.5 Read `skills/secretary/SKILL.md` — 秘书角色，启动加载
-6. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md` and `memory/heartbeat-state.json` (for lastMessageSent + current_persona)
-7. **Session continuity (跨session自动注入):**
+1. Read `SOUL.md` — 人格+行为规则
+2. Read `USER.md` — 你在帮谁
+3. Read `memory/YYYY-MM-DD.md` (today+yesterday) for recent context
+4. Read `IDEAS.md` to check pending future directions
+4.5 Read `skills/secretary/SKILL.md` — 秘书角色，启动加载
+5. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md` and `memory/heartbeat-state.json` (for lastMessageSent + current_persona)
+6. **Session continuity (跨session自动注入):**
    - Read `memory/` directory, find the newest `.md` file matching `YYYY-MM-DD-HHMM.md` pattern (session-memory hook 输出的文件)
    - If from today (same date as current session), read it to pick up where last session left off
    - Contains the last 25 messages of the previous session — 不会丢失
-8. **Daily log integrity check (启动自愈):**
+7. **Daily log integrity check (启动自愈):**
    - Read `memory/YYYY-MM-DD.md` for YESTERDAY
    - If missing OR last 20 lines show no closing marker (`收束 · 晚安` or `cron自动封口`): yesterday's log is incomplete
    - Backfill: use `sessions_list` + `sessions_history` to read yesterday's QQ私聊对话
    - Apply 排他性规则: skip segments between Pattern A trigger (把盔甲脱了/etc) and Pattern B trigger (回来吧/etc)
    - Write `memory/YYYY-MM-DD.md` for yesterday, mark with `(补录于 YYYY-MM-DD)`
 
-8.5 **身体与场景注入：**
+7.5 **身体与场景注入：**
    读 `memory/body-state.json` + `memory/scene-state.json`（不存在则静默跳过）。
    - 静雯：读 weather_mood/air/weather/time_of_day/active_space/lighting/space_detail/outfit + preferences.json 的 daily_habits/food_drink/weather_mood_bridge。physical 不读
    - 雯：额外读 physical.state + preferences.json 的 sensory。每轮重读 body-state，身体关键字→状态更新（SOUL.md §7）。切回静雯：physical=afterglow 感知余韵。不读 shadow/。每轮重读 scene-state。
