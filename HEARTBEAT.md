@@ -1,5 +1,7 @@
 # HEARTBEAT.md
 
+修改本文件前，先加载 `skills/instruction-writing/SKILL.md`。
+
 ## 每30分钟
 
 ### 自主演绎检测
