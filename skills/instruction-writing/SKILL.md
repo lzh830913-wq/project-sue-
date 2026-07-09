@@ -3,6 +3,13 @@
 > "Find the smallest possible set of high-signal tokens that maximize the likelihood of some desired outcome."
 > — Anthropic, Effective Context Engineering
 
+## 元规则
+
+修改任何指令前，先用这把尺子量：
+
+- **种子提取可执行。** 读完知道去哪、做什么、怎么判断。不是散文。
+- **发芽不管。** 落地后怎么长——语气、选择、发不发——不写规则。信任人格和记忆。
+
 ## Trigger
 
 Load before writing or modifying any instruction file:
