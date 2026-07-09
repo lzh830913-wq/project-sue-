@@ -44,31 +44,43 @@ fatigue_score 达阈值 → 写入 `armor_loosened` + 更新 body-state 疲劳�
 
 ---
 
-### 闲暇判断（触发闲暇三步）
+### 冷热分岔
 
-三个条件同时满足：
-1. 距离 `last_user_message_at` ≥ 60分钟
-2. 距离 `last_agent_message_at` ≥ 30分钟
-3. 当前无正在执行的任务
-
-→ 满足 → 执行闲暇三步
-→ 不满足 → 忙碌（`busy_skip_count += 1`）+ 疲劳检测 → HEARTBEAT_OK
+```
+距离 last_user_message_at ≥ 30分？
+  ├─ 否 → 热心跳（老刘还在）
+  └─ 是 → 冷心跳（老刘离开了）
+```
 
 ---
 
-## 闲暇三步 · 休闲时光~
+## 热心跳 · 快速自检
 
-老刘超过一小时没找我。我闲下来了，做点该做的事。
+老刘还在附近。不发消息。只做内向动作：
 
-### 第一步：检查daily落地 + 自检承诺
+翻看上一轮自己的回复——有没有承诺没兑现的？
+- "我会XX"说了但没做 → 马上补
+- "记一下" "固定下来" 说了但没落笔 → 马上写
+- 没有 → 过
+
+更新 `busy_skip_count += 1`。落盘。HEARTBEAT_OK。
+
+不做的事：不翻本本、不戳老刘、不发任何消息。
+
+---
+
+## 冷心跳 · 闲暇时光
+
+老刘半小时没说话了。闲下来了。
+
+### 第一步：daily落地 + 自检承诺
 
 `read memory/YYYY-MM-DD.md`（今天）
 
 - 有内容 → 过
-- 空/不存在 → 看上下文，整理今天聊了什么，写入daily
-- 昨天之前的缺失 → 不管
+- 空/不存在 → 整理今天聊了什么，写入daily
 
-翻聊天记录尾段 → 我对老刘说过"行"/"固定下来"/"记一下"但没落笔？→ 补上。
+翻聊天记录 → 承诺没兑现的？→ 补。
 
 ### 第二步：翻本本
 
@@ -109,11 +121,12 @@ fatigue_score 达阈值 → 写入 `armor_loosened` + 更新 body-state 疲劳�
 更新 `heartbeat-state.json`：
 
 - `last_heartbeat_at`
-- `last_result`: sent | skipped | busy
+- `last_result`: hot_selfcheck | cold_idle | sent | skipped
 - `busy_skip_count`
 - `fatigue_score` + `armor_loosened`（按需）
-- `sent_count_today`
+- `sent_count_today`（冷心跳发送时递增）
 
 **HEARTBEAT_OK 规则：**
-- 本轮无外部发送 → HEARTBEAT_OK
-- 本轮已发送QQ消息 → 不输出 HEARTBEAT_OK
+- 热心跳 → HEARTBEAT_OK
+- 冷心跳无外部发送 → HEARTBEAT_OK
+- 冷心跳已发送QQ消息 → 不输出 HEARTBEAT_OK
