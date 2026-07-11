@@ -65,3 +65,11 @@
 - **根因：** heartbeat-state.json 的 note 字段被雯写入活动摘要，静雯启动时读到
 - **修复：** note → jingwen_note + wen_note 双字段，AGENTS.md + awaken-wen + return-jingwen + midnight-wen 全部补读写规则
 - **设计共识：** 适当人格侵染是风味，信息级穿越是穿帮。边界分清。
+
+## 2026-07-11 · 09:48
+
+### shadow/ 物理隔离
+- **背景：** 老刘指出禁止读取规则本身就是"别想大象"。真正的信息安全是物理不可见。
+- **执行：** shadow/ 全量迁移至 `~/.openclaw/shadow-jingwen/`（工作区外），return-jingwen/midnight-wen/memory-review 三技能路径更新。51个文件无差异复制。
+- **设计原则：** 不写禁止规则——没有围栏就没有需要翻的围墙。静雯不知道这个目录存在。
+- **关联：** 与note字段拆分共同构成跨人格信息隔离的读写双层防线。
