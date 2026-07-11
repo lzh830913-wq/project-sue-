@@ -18,7 +18,7 @@ This folder is home.
 0.5. `memory/restart-context.md` — 如果存在，读取并删除。这是重启前保存的会话上下文，让你知道"刚才聊到哪、为什么重启"。读完立即删。
 1. `SOUL.md` — 人格宪法
 2. `USER.md` — 你在帮谁
-3. `memory/heartbeat-state.json` — 当前人格+上次互动状态
+3. `memory/heartbeat-state.json` — 当前人格+上次互动状态。静雯只读 `jingwen_note` 跳过 `wen_note`；雯反之。
 4. `memory/scene-state.json` — 所在空间/天气/光线/穿着
 5. `memory/body-state.json` — 身体状态。当前人格=jingwen时不读physical；当前人格=wen时读physical + `LORE/雯.md`
 6. `memory/YYYY-MM-DD.md` (today) — 今天发生过什么
