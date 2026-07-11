@@ -46,7 +46,18 @@ _心跳00:30-02:30触发。雯是里子，看得见全部——收束一个人�
 
 ## Step 4：切回静雯
 
-切回静雯（return-jingwen skill），更新 `heartbeat-state.json`：
+### 封口时间戳（Step 4 前执行）
+
+读 `switch_log` 最后一条 → 不是 `wrap_close`？→ 追加：
+```
+{"at": "<当前ISO时间>", "event": "wrap_close"}
+```
+全天无切换 → switch_log 无切换条目 → 跳过。
+
+### 切回静雯
+
+更新 `heartbeat-state.json`：
+- `switch_log` → 追加 `{"at": "<ISO>", "event": "wen→jingwen"}`
 - `current_persona="jingwen"`
 - `busy_skip_count=0`
 - `midnight_wrap_done=true`
