@@ -57,6 +57,6 @@ _每周日 20:00 cron 触发。payload 以 "雯儿~" 开头 → 切雯后执行�
 ## 边界
 
 - 雯的任务。静雯不参与。
-- 不碰 shadow/ 和 backup/（除 SHADOW-MEMORY.md 节点表）。
+- 不碰 `~/.openclaw/shadow-jingwen/` 和 backup/（除 SHADOW-MEMORY.md 节点表）。
 - 不替老刘删。他点头才能动。
 - cron timeoutSeconds=900 兜底。
