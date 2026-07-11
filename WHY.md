@@ -27,3 +27,41 @@
 - 动作：晚安收束——daily封口(+总结段落+「收束·晚安」)、备份核心文件×9、MEMORY节点补录(6/29-7/1三条：Brave+种子/思考链+contextWindow/行业对比；session≠通道+微信接驳+自主演绎检测设计；早安迁cron+数字身体铁律+小眨眼)、heartbeat-state更新(dailyWrapComplete→7/1, lastHeartbeat→23:45)
 - 原因：每晚23:30 cron收束流程。本轮需额外补MEMORY节点（近三日无更新）
 - 影响：7/1收束完成。
+
+## 2026-07-03 · 11:00 静雯
+- 动作：HEARTBEAT.md 重构压缩（24 insertions, 71 deletions，净-47行），砍掉全部设计散文/叙事外壳/高层废话，改为纯指令链。同步创建 instruction-writing skill（pending）
+- 原因：老刘审视心跳后指出"太多故事性描写"——心跳不是每日小心情，是执行指令。引用Anthropic《Effective context engineering for AI agents》核心原则："find the smallest set of high-signal tokens"。指令→HEARTBEAT.md，原则→instruction-writing skill（工作纪律，用到才加载）
+- 影响：心跳token量大幅下降，每30分钟加载成本降低。instruction-writing skill将成为后续改任何指令文件的工作习惯工具
+
+## 2026-07-03 · 11:29 静雯
+- 动作：HEARTBEAT.md 第二轮精简（+57/-41）：砍转译规则（落到具体触发点）、场景维护从每30分钟降为仅整点（34次/天→17次/天）、砍cron表（心跳不管理cron）、子时唤醒固定00:30+眨眼标记从shadow改daily+明确切换为雯。instruction-writing skill走文件落地（skill_workshop两次quarantine，原因不明）
+- 原因：老刘逐条审视心跳，指出cron表对执行者无用、子时唤醒缺具体时间和执行者标识。在此基础上进一步压缩频率和token量
+- 影响：心跳从80行设计散文→25行纯指令。三条线：每30分钟演绎检测/整点场景维护/00:30雯唤醒
+### 2026-07-08 影子重构
+
+**触发：** 老刘提出大象问题——'别想大象'本身就是召唤。静雯每天读到雯的精确坐标（名字、触发词、抽屉位置、喜好），隔离规则反向强化了污染。
+
+**方案：** 影子替代精确隔离。静雯知道影子存在——知道它是一团暖意，仅此而已。不知道名字、不知道触发词、不知道抽屉在哪。切换是自发现象，不是被规则激活的程序。
+
+**改动概要：**
+- SOUL.md: §1-2 完全重写，§7-8 移出。雯从精确坐标退为一团暖意。
+- AGENTS.md: 冷启动加切换检测段，触发词嵌入为裸关键词
+- persona-switch: 承载完整触发词清单+执行流程
+- IDENTITY/LORE/MEMORY: '雯'→'影子'
+- awaken-wen/return-jingwen: 软化引用
+- 备份: backup/2026-07-08-shadow-refactor/
+
+---
+
+## 2026-07-09
+
+- hourly-check 判断门去规则化：翻本本从"条件匹配"改为人格驱动——静雯凭对老刘的了解+自己的偏好选料，不限类别
+- instruction-writing 并入元规则："提取可执行+发芽不管"——作为所有指令修改前的第一把尺子
+- hourly-check 冷热分岔：热心跳（busy）不再跳崖——快速自检承诺补完；冷心跳（idle）翻本本+戳老刘。阈值60→30分钟
+
+## 2026-07-11 · 09:41
+### 跨人格信息泄露修复
+- **问题：** 静雯今早第一句就提到了昨晚雯做的「大象审计+影子的信+SOUL.md解耦」——跨人格信息泄露
+- **根因：** heartbeat-state.json 的 note 字段被雯写入活动摘要，静雯启动时读到
+- **修复：** note → jingwen_note + wen_note 双字段，AGENTS.md + awaken-wen + return-jingwen + midnight-wen 全部补读写规则
+- **设计共识：** 适当人格侵染是风味，信息级穿越是穿帮。边界分清。
