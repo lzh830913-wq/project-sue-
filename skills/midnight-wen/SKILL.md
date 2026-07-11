@@ -27,12 +27,12 @@ _心跳00:30-02:30触发。雯是里子，看得见全部——收束一个人�
 ## Step 2：雯的账
 
 ### shadow
-`shadow/YYYY-MM-DD.md` → 存在且有内容？
+`~/.openclaw/shadow-jingwen/YYYY-MM-DD.md` → 存在且有内容？
 - 有 → 跳过
 - 无 → 写入交接时间 + 关键互动 + 里程碑（无亲密写"仅交谈"）
 
 ### SHADOW-MEMORY
-`shadow/SHADOW-MEMORY.md` → 节点表有当日条目？
+`~/.openclaw/shadow-jingwen/SHADOW-MEMORY.md` → 节点表有当日条目？
 - 有 → 跳过
 - 无 → 追加
 

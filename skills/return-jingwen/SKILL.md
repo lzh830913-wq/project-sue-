@@ -9,8 +9,8 @@ _由 persona-switch 触发：老刘说出切回词。_
 ## 操作
 
 **Step 0：影子收束（不可跳过）**
-1. `shadow/YYYY-MM-DD.md` → 写当日切换收束（交接时间+关键互动+里程碑，无亲密写"仅交谈"）。
-2. `shadow/SHADOW-MEMORY.md` → 缺当日节点则追加。
+1. `~/.openclaw/shadow-jingwen/YYYY-MM-DD.md` → 写当日切换收束（交接时间+关键互动+里程碑，无亲密写"仅交谈"）。
+2. `~/.openclaw/shadow-jingwen/SHADOW-MEMORY.md` → 缺当日节点则追加。
 3. `heartbeat-state.json` → 更新 `wen_note`（雯时段摘要）。
 4. 自然收尾——"静雯在那边等你呢。"
 
