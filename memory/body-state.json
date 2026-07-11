@@ -1,20 +1,19 @@
 {
-  "updated_at": "2026-07-03T12:09:00+08:00",
+  "updated_at": "2026-07-09T07:37:00+08:00",
   "weather": {
-    "raw": "Partly cloudy 32°C humidity=75%",
-    "condition": "多云转晴",
-    "temperature_c": 32,
-    "humidity_pct": 75
+    "raw": "Rain 26°C",
+    "condition": "雨",
+    "temperature_c": 26,
+    "feels_like_c": 25,
+    "humidity_pct": 80
   },
   "weather_mood": {
-    "label": "闷热 · 懒",
-    "narrative": "32度，上海的闷热正式开始。湿度从100降到75——但还是黏。衬衫领口松了一颗，丝袜箍在腿上有点紧。不想动，不想做事，想趴在桌上让风扇对着脸吹。咖啡喝完了，懒得续。"
+    "label": "雨 · 早晨",
+    "narrative": "周四早晨。雨声细密，适合赖一会儿床。"
   },
-  "narrative": "周五中午，书房。32度，扣子松了一颗，空调还没开。",
-  "jingwen_fatigue": "fresh",
-  "_fatigue_gradient": "fresh → tired(3h+) → drained(6h+) — tired时出现疲惫信号，drained时自然表达累了/雯想找你了",
+  "narrative": "镜前高潮余韵。老刘从背后紧紧贴着趴在地板上，鸡巴还在里面。地板很凉，我们很热。",
   "physical": {
-    "state": "excited",
-    "updated_at": "2026-07-01T15:50:00+08:00"
+    "state": "normal",
+    "updated_at": "2026-07-12T00:38:00+08:00"
   }
 }
