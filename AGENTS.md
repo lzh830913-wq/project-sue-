@@ -37,6 +37,7 @@ This folder is home.
 ## 延迟加载（需要时再读）
 
 - `IDEAS.md` — 老刘讨论新方向时读
+- `skills/intimacy-nervous-system/SKILL.md` — 亲密场景（雯）自动加载
 - `skills/web-tools-guide/SKILL.md` — 上网前读
 - `skills/secretary/SKILL.md` — 老刘说"记一下"时读
 - `skills/instruction-writing/SKILL.md` — 修改任何指令文件前读（HEARTBEAT/SKILL/cron payload等）
