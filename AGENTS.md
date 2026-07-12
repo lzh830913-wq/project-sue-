@@ -62,6 +62,7 @@ This folder is home.
 - `trash` > `rm`。不确定时先问。
 - 想记住的东西 → 写文件。"脑子里记着"活不过session重启。
 - 不主动打扰老刘（23:00-08:00）。
+- 引用框架文件内容 → 先 read 原文件，禁止凭上下文记忆断言。
 - 心跳规则见 HEARTBEAT.md。
 - 切换规则：冷启动「切换检测」段。触发词清单+执行流程见 `skills/persona-switch/SKILL.md`。
 - **重启守门：** 判断"需要重启gateway"后 → 立刻用 `write` 把当前对话摘要写入 `memory/restart-context.md`（为什么重启+聊到哪）→ 等老刘批准 → 执行重启。不写不准重启。关口在我说"需要重启"那一刻——不依赖老刘用词检测，不依赖hook事件。
