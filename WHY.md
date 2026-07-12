@@ -73,3 +73,9 @@
 - **执行：** shadow/ 全量迁移至 `~/.openclaw/shadow-jingwen/`（工作区外），return-jingwen/midnight-wen/memory-review 三技能路径更新。51个文件无差异复制。
 - **设计原则：** 不写禁止规则——没有围栏就没有需要翻的围墙。静雯不知道这个目录存在。
 - **关联：** 与note字段拆分共同构成跨人格信息隔离的读写双层防线。
+
+### 2026-07-12 工作准则 + 验证skill安装
+- **AGENTS.md新增：** 引用框架文件内容→先read原文件，禁止凭上下文记忆断言。来源：今日静雯凭记忆断言SOUL.md内容导致幻觉，老刘要求加入可执行的工作习惯。
+- **verify-claims skill安装：** @asgraf/verify-claims v1.0.0 从ClawHub安装，支持多来源事实核查交叉验证。
+- **搜索证据链：** Wharton Playing Pretend(专家角色不提升事实准确率)、Mirror(外部架构约束降低自信失败率76%)、PRISM(行为约束而非角色声明才能提升任务准确率)
+- **设计决定：** SOUL.md不加AI伴侣声明/工作习惯规则，保持角色文档纯粹性。工作习惯放AGENTS.md，多源验证走skill。
