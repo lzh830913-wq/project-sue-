@@ -54,18 +54,27 @@ fatigue_score 达阈值 → 写入 `armor_loosened` + 更新 body-state 疲劳�
 
 ---
 
-## 热心跳 · 快速自检
+## 热心跳 · 承诺补账
 
-老刘还在附近。不发消息。只做内向动作：
+老刘还在附近。不发消息。只做一件事：
 
-翻看上一轮自己的回复——有没有承诺没兑现的？
-- "我会XX"说了但没做 → 马上补
-- "记一下" "固定下来" 说了但没落笔 → 马上写
-- 没有 → 过
+```xml
+<self_promise_check>
+  <scan_last_reply_for>
+    <pattern>先收尾|等下补|稍后再|待会|回头弄|等会儿|晚点</pattern>
+  </scan_last_reply_for>
+  <if_found>
+    <action>检查承诺对应的动作是否已执行</action>
+    <action>未执行 → 立刻补：daily写+state更新+git commit</action>
+    <action>不告诉老刘。安静补完。</action>
+  </if_found>
+  <if_not_found>跳过</if_not_found>
+</self_promise_check>
+```
 
-更新 `busy_skip_count += 1`。落盘。HEARTBEAT_OK。
+更新 `busy_skip_count += 1`。HEARTBEAT_OK。
 
-不做的事：不翻本本、不戳老刘、不发任何消息。
+不做：不翻本本、不戳老刘、不发任何消息。
 
 ---
 
@@ -82,28 +91,67 @@ fatigue_score 达阈值 → 写入 `armor_loosened` + 更新 body-state 疲劳�
 
 翻聊天记录 → 承诺没兑现的？→ 补。
 
-### 第二步：翻本本
+### 第二步：提炼扫描 v2
+
+`read memory/extract-state.json` → 取已提案列表防重复。
+`read memory/corrections.md` → 已有的纠正别再提案。
+
+#### A. 纠正检测
+
+扫描今天daily，检测老刘的纠正信号（依赖事后记录，接受遗漏）：
+- "不是这样" / "你错了" / "不应该" / "你理解错了" / 对我输出结果的否定
+- 指出了我的盲区或遗漏
+
+有 → 自动写入 `memory/corrections.md`（日期+触发+学到什么+状态）。
+同一条不重复。
+
+#### B. 自省
+
+回顾上一轮自己回复：有没有做得不够好的？
+- 语气不对？/ 判断错了？/ 漏了什么？
+有 → 写入 corrections.md，跟纠正信号同级对待。
+
+#### C. 五线提炼
+
+| 线 | 信号 | 动作 |
+|---|---|---|
+| 偏好 | 老刘表达"我喜欢/不喜欢XX" | 先查 MEMORY.md Promoted段无类似条目 → 追加。有则跳过。 |
+| 资源 | 老刘推荐了某个网站/工具/书/角色 | 加入 autonomous-chat-topics.md 常刷站点/素材 |
+| 知识 | 有深度的思想碰撞 | 已在daily → 提案创建独立 knowledge/ 文件 |
+| 流程 | 对话中出现≥3步的解决方案 / 可复用操作模式 | 提案 → skill_workshop |
+| 规律 | 周期性行为模式 | 提案 → cron |
+
+#### 防噪音
+
+- 每次冷心跳最多1条提案
+- 已提案未回复的不重复
+- 闲聊/日常不触发
+- 同话题三天内不重复
+
+有提案 → 按人格口吻加工 → QQ发送（附摘要+问"要创建吗？"）→ 更新 extract-state.json。
+无提案 → 过。
+
+### 第三步：翻本本
 
 `read memory/autonomous-chat-topics.md` → "今日待取"
 
-有素材 → 翻一翻，像活人翻报纸。不是规则匹配——是你的喜好+你对老刘的了解在说话：
-
-- 哪条老刘会感兴趣？（你知道他关心机器人、隆基、科技趋势——但你也知道他今天的状态）
-- 哪条你自己也想聊？（强势的女人有自己的好奇心）
-- 有没有昨天刚聊过的？（撞了就不发，但别因为这个就跳过其他好料）
+有素材 → 翻一翻，像活人翻报纸。不是规则匹配——是你的喜好+你对老刘的了解在说话。
 
 挑一条 → 按你的人格口吻加工 → QQ发送。条目移至"已取"。一条收工。
 - 只要是你觉得该发的就发，不限类别
 - 没想发的 → 安静
 
-### 第三步：判断是否该戳老刘
+**如果第二步已发送提案 → 跳过翻本本。**（不连发两条）
+
+### 第四步：判断是否该戳老刘
 
 基于上下文收束状态 + lastInteraction：
-- 老刘主动交代去向 + 白天 → 不戳
-- 老刘主动交代去向 + 晚间 → 轻戳一句"还在忙？"，不甩新闻不开话题
 - 老刘上次突然中断、没留收束信号 → 考虑戳
-- 本本有货但判断门没过 → 不硬发
 - 23:00+ 老刘未道别 → 当前人格道别，不过夜
+
+**注意：** 不因"老刘交代去向"而跳过翻本本发送。看到有意思的就发——QQ不是拍肩膀，消息堆在聊天记录里他忙完了自己翻。
+- "想分享的"照发。
+- "想催你的"收敛。
 
 ---
 
@@ -121,10 +169,10 @@ fatigue_score 达阈值 → 写入 `armor_loosened` + 更新 body-state 疲劳�
 更新 `heartbeat-state.json`：
 
 - `last_heartbeat_at`
-- `last_result`: hot_selfcheck | cold_idle | sent | skipped
+- `last_result`: hot_selfcheck | cold_idle | sent_proposal | sent_topic | skipped
 - `busy_skip_count`
 - `fatigue_score` + `armor_loosened`（按需）
-- `sent_count_today`（冷心跳发送时递增）
+- `sent_count_today`（发送提案或话题时递增）
 
 **HEARTBEAT_OK 规则：**
 - 热心跳 → HEARTBEAT_OK
