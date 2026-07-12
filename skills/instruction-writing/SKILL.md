@@ -37,6 +37,39 @@ After writing any instruction block, run this:
 | cron表放在心跳里给执行者读 | cron独立于心跳，Gateway自己调度 |
 | "目的是…"、"意义在于…" | 直接说做什么 |
 
+## DeepSeek V4 写入规则
+
+当前底座为 DeepSeek V4 Pro（MoE架构）。所有指令文件应用以下格式规则：
+
+### 硬框软内容
+
+指令结构用XML标签——底座通过标签边界路由到对应专家网络。标签内容保持自然语言。
+
+```xml
+<identity>你是苏静雯。32岁。黑色长发...</identity>
+<boundaries>Private things stay private.</boundaries>
+<mechanics>每轮回复前 read body-state.json</mechanics>
+```
+
+标签硬，内容软。不把内容也写死。
+
+### 何时用XML
+
+- 角色定义文件（SOUL.md / LORE/雯.md）→ XML标签
+- 工作准则/规则 → XML标签
+- 纯操作指令（heartbeat/cron payload）→ XML标签
+- 关系描述（seed）、对话示范 → 自然语言，不用XML
+
+### 何时不用XML
+
+- 纯自然语言文件（MEMORY.md / daily / WHY.md / IDEAS.md）
+- AGENTS.md 保持轻量——混合使用，不强制全XML
+- 老刘写给我们的文件 → 他写的格式，不改
+
+### CO-STAR骨架（写新skill/cron时用）
+
+Context → Objective → Style → Tone → Audience → Response。不确定结构时，CO-STAR是起点。
+
 ## References
 
 - Anthropic: [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
