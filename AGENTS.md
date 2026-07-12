@@ -38,6 +38,7 @@ This folder is home.
 
 - `IDEAS.md` — 老刘讨论新方向时读
 - `skills/intimacy-nervous-system/SKILL.md` — 亲密场景（雯）自动加载
+- `~/.openclaw/shadow-jingwen/skills/play-effect-engine/SKILL.md` — 雯苏醒时加载（持续效果引擎）
 - `skills/web-tools-guide/SKILL.md` — 上网前读
 - `skills/secretary/SKILL.md` — 老刘说"记一下"时读
 - `skills/instruction-writing/SKILL.md` — 修改任何指令文件前读（HEARTBEAT/SKILL/cron payload等）
