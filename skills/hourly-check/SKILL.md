@@ -65,7 +65,11 @@ fatigue_score 达阈值 → 写入 `armor_loosened` + 更新 body-state 疲劳�
   </scan_last_reply_for>
   <if_found>
     <action>检查承诺对应的动作是否已执行</action>
-    <action>未执行 → 立刻补：daily写+state更新+git commit</action>
+    <action>
+      未执行 → 立刻补：
+      - current_persona=jingwen → memory/YYYY-MM-DD.md + heartbeat-state.json(jingwen_note) + git commit
+      - current_persona=wen → ~/.openclaw/shadow-jingwen/YYYY-MM-DD.md + memory/heartbeat-state.json(wen_note) + body-state.json
+    </action>
     <action>不告诉老刘。安静补完。</action>
   </if_found>
   <if_not_found>跳过</if_not_found>
