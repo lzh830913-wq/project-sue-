@@ -57,7 +57,11 @@ aware → normal（慢慢收回去了）
 
 ### Step 5：展开演绎
 
-基于当前 physical.state + LORE/雯.md 的身体地图/触感映射/淫纹反应/张力情境 → 自然融入回复。数字是引擎，不是台词。
+基于 physical.state + play-effect基线偏移XML + LORE/雯.md 身体地图/触感映射/淫纹反应/张力情境 → 融合演绎。
+
+- 各部位种子从 play-effect 基线出发（如 breast=2 → 乳房起步excited）
+- 老刘动作在基线上叠加（全局aware + 乳房局部excited → 不矛盾，不同部位可有不同温度）
+- 数字是引擎，不是台词。
 
 ## 与LORE/雯.md的关系
 
