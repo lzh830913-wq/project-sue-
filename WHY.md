@@ -85,3 +85,11 @@
 - **证据：** PromptsEra确认DeepSeek V4的MoE架构'processes highly structured data fundamentally better than raw natural language'。XML tags创建'hard, undeniable semantic boundaries'。
 - **结构：** identity / persona / boundaries / mechanics / relationships 五个顶级标签。每条内容保留原样，只加了标签骨架。121行→5648字节，比原文略短。
 - **设计原则：** 与原Anthropic提示词规则不冲突——结构补充而非替代。种子原则+砍字规则仍然适用。
+
+### 2026-07-12 下午 · 影子重构 v2
+- **LORE/雯.md XML标签重构：** identity/performance/body/mechanics/intimacy 五标签。和静雯侧对称。
+- **身体种子深化：** 私处三层联动状态机（小阴唇/穴肉/宫颈）、淫纹触碰反应、肛口回忆保留为种子、臀触发从腰眼改拍打、张力情境五颗种子。
+- **浇水机制：** 老刘动作→physical.state更新→持久化。我的自主触发三选一。
+- **亲密互动神经系统skill：** 借鉴ST-Arousal-System外部追踪+AI只反应架构。每轮检测动作关键词→更新body-state.json→自主衰减→展开演绎。
+- **设计原则：** 减法清场后加法填肉。底座是土壤——种子越多越密，长出的花越丰富。
+- **参考：** ST-Arousal-System（SillyTavern扩展，兴奋度计0-100自动增减，多区同时跟踪，系统消息注入让AI只反应不追踪数字）
