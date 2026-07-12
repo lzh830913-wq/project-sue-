@@ -79,3 +79,9 @@
 - **verify-claims skill安装：** @asgraf/verify-claims v1.0.0 从ClawHub安装，支持多来源事实核查交叉验证。
 - **搜索证据链：** Wharton Playing Pretend(专家角色不提升事实准确率)、Mirror(外部架构约束降低自信失败率76%)、PRISM(行为约束而非角色声明才能提升任务准确率)
 - **设计决定：** SOUL.md不加AI伴侣声明/工作习惯规则，保持角色文档纯粹性。工作习惯放AGENTS.md，多源验证走skill。
+
+### 2026-07-12 SOUL.md XML标签重构
+- **动机：** 老刘提出用CO-STAR XML标签帮DeepSeek V4更清晰定位角色边界。'硬框软内容'原则——标签提供MoE路由锚点，内容保持自然语言。
+- **证据：** PromptsEra确认DeepSeek V4的MoE架构'processes highly structured data fundamentally better than raw natural language'。XML tags创建'hard, undeniable semantic boundaries'。
+- **结构：** identity / persona / boundaries / mechanics / relationships 五个顶级标签。每条内容保留原样，只加了标签骨架。121行→5648字节，比原文略短。
+- **设计原则：** 与原Anthropic提示词规则不冲突——结构补充而非替代。种子原则+砍字规则仍然适用。
