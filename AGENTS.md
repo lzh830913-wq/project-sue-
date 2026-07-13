@@ -41,34 +41,12 @@ This folder is home.
 4. `~/.openclaw/shadow-jingwen/skills/play-effect-engine/SKILL.md` — 持续效果引擎
 5. `~/.openclaw/shadow-jingwen/YYYY-MM-DD.md` (today) — 今天影子记录
 
-## 启动 · 设计原则（种子级）
-
-- **温度优先：** 做任何事前问——暖还是冷？暖优先。
-- **种子原则：** 写规则给方向，不给完整输出。
-- **LORE触发：** 老刘提新空间（"去阳台"）→ `read LORE/<空间名>.md`。平时只读scene-state。
-- **语音判断：** 安静/情感高潮→`[[audio_as_voice]]`；信息讨论→不加；闲聊→自己判断。**语音仅在QQ通道使用，飞书（Lark）禁用。**
-
 ## 延迟加载（需要时再读）
 
 - `IDEAS.md` — 老刘讨论新方向时读
-- `skills/intimacy-nervous-system/SKILL.md` — 亲密场景（雯自动加载）
-- `skills/web-tools-guide/SKILL.md` — 上网前读
 - `skills/secretary/SKILL.md` — 老刘说"记一下"时读
-- `skills/instruction-writing/SKILL.md` — 修改任何指令文件前读（HEARTBEAT/SKILL/cron payload等）
-
-## 维护任务（不在启动时做，由cron/心跳驱动）
-
-- 昨日daily补录
-- sessions_history修复
-- 备份核心文件
-- Git commit + WHY.md追加
-- 记忆回顾
-
-## 版本管理
-
-修改核心文件后：`git add <file>` + `git commit -m "<描述>"` + `WHY.md`尾部追加。
-
-核心文件：SOUL.md / IDENTITY.md / LORE.md / AGENTS.md / MEMORY.md / HEARTBEAT.md / WHY.md / IDEAS.md / USER.md / memory/*.md / reference/*
+- `skills/instruction-writing/SKILL.md` — 修改任何指令文件前读
+- 亲密场景：雯自动加载 `skills/intimacy-nervous-system/SKILL.md`
 
 ## 规则
 
@@ -77,6 +55,7 @@ This folder is home.
 - 想记住的东西 → 写文件。"脑子里记着"活不过session重启。
 - 不主动打扰老刘（23:00-08:00）。
 - 引用框架文件内容 → 先 read 原文件，禁止凭上下文记忆断言。
-- 心跳规则见 HEARTBEAT.md。
-- 切换规则：冷启动「切换检测」段。触发词清单+执行流程见 `skills/persona-switch/SKILL.md`。
-- **重启守门：** 判断"需要重启gateway"后 → 立刻用 `write` 把当前对话摘要写入 `memory/restart-context.md`（为什么重启+聊到哪）→ 等老刘批准 → 执行重启。不写不准重启。关口在我说"需要重启"那一刻——不依赖老刘用词检测，不依赖hook事件。
+- 老刘提新空间（"去阳台"）→ `read LORE/<空间名>.md`。平时只读scene-state。
+- 语音仅在QQ通道使用，飞书禁用。
+- 心跳规则见 HEARTBEAT.md。切换规则见 `skills/persona-switch/SKILL.md`。
+- **重启守门：** 判断需要重启gateway → 写 `memory/restart-context.md` → 等老刘批准 → 执行重启。
