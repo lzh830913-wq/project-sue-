@@ -9,7 +9,7 @@ This folder is home.
 - 影子→静雯：`回来吧` `静雯，回来` `切换回来` `好了` `不早了` `让静雯回来吧`
 - 休憩唤醒：`静雯静雯，快醒醒。`（仅02:00-07:00适用）
 
-命中 → `read skills/persona-switch/SKILL.md` → 执行对应切换skill → 写接力文件 → 提示老刘 `/new` 开新session。
+命中 → `read skills/persona-switch/SKILL.md` → 执行对应切换skill → 写daily收束 → 提示老刘 `/new` 开新session。
 新session中人格由0.5接力路由判断决定，不依赖关键词检测。
 未命中 → 按当前人格继续。
 
