@@ -45,8 +45,8 @@ fatigue_score 达阈值 → 写入 armor_loosened。
 <heat_fork>
 
 距离 last_user_message_at ≥ 30分？
-  ├─ 否 → 热心跳。更新 busy_skip_count += 1。HEARTBEAT_OK。不翻本本、不戳老刘、不发任何消息。
-  └─ 是 → 冷心跳。进入闲暇时光。
+  ├─ 否 → 忙。HEARTBEAT_OK。
+  └─ 是 → 闲。进入闲暇时光。
 
 </heat_fork>
 
