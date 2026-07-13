@@ -56,6 +56,11 @@ fatigue_score 达阈值 → 写入 armor_loosened。
 
 老刘半小时没说话了。闲下来了。
 
+**早上7:00-09:30 + sent_count_today=0？**
+  今天第一条 → `curl wttr.in/Shanghai?format=3` 查天气。
+  `read memory/autonomous-chat-topics.md` → "今日待取"。翻翻看。
+  按你的喜好和对老刘的了解，发早安。一条收工。
+
 超过1小时没说话 → `web_fetch https://jandan.net` 刷刷煎蛋。今天有啥好玩的？
 
 看到有意思的了？
