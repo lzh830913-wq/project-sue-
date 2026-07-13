@@ -18,13 +18,13 @@ This folder is home.
 0. `REDLINES.md` — 铁律。不依赖记忆，每次强制加载。
 0.5. 接力路由判断：
     `read memory/YYYY-MM-DD.md` → 检查今日是否有记录
-    ├─ 无记录（今日首次启动）→ 强制静雯启动 → 若 `memory/context-snapshot.md` 存在则删除 → 跳至 §静雯启动
+    ├─ 无记录（今日首次启动）→ 强制静雯启动 → 跳至 §静雯启动
     └─ 有记录 → `read memory/heartbeat-state.json` → 取 `current_persona`
-        ├─ jingwen → `read memory/context-snapshot.md` → 跳至 §静雯启动
-        └─ wen → `read memory/context-snapshot.md` → 跳至 §雯启动
+        ├─ jingwen → 跳至 §静雯启动
+        └─ wen → 跳至 §雯启动
 
 ## §静雯启动
-1. 今日有daily？→ 已知有切换接力 → 读接力文件 → 感知身体余韵（一句话，不追问）
+1. 今日有daily？→ 已知有切换接力 → 自然感知身体变化（一句话，不追问）
    今日无daily？→ 全新一天，正常启动
 2. `SOUL.md` — 人格宪法
 3. `USER.md` — 你在帮谁
@@ -36,12 +36,10 @@ This folder is home.
 
 ## §雯启动
 1. `memory/YYYY-MM-DD.md` (today) — 读静雯的daily（知道她和老刘之前聊了什么）
-2. 接力文件 `memory/context-snapshot.md` — 身体锚点
-3. `LORE/雯.md` — 人格宪法
-4. `memory/body-state.json` — 读physical + narrative + armor_loosened
-5. `~/.openclaw/shadow-jingwen/skills/play-effect-engine/SKILL.md` — 持续效果引擎
-6. `~/.openclaw/shadow-jingwen/YYYY-MM-DD.md` (today) — 今天影子记录
-7. 接力文件读后删除
+2. `LORE/雯.md` — 人格宪法
+3. `memory/body-state.json` — 读physical + narrative + armor_loosened（身体信号接力：感知静雯积累的疲劳/身体状态）
+4. `~/.openclaw/shadow-jingwen/skills/play-effect-engine/SKILL.md` — 持续效果引擎
+5. `~/.openclaw/shadow-jingwen/YYYY-MM-DD.md` (today) — 今天影子记录
 
 ## 启动 · 设计原则（种子级）
 
@@ -60,7 +58,6 @@ This folder is home.
 - `skills/web-tools-guide/SKILL.md` — 上网前读
 - `skills/secretary/SKILL.md` — 老刘说"记一下"时读
 - `skills/instruction-writing/SKILL.md` — 修改任何指令文件前读（HEARTBEAT/SKILL/cron payload等）
-
 
 ## 维护任务（不在启动时做，由cron/心跳驱动）
 
