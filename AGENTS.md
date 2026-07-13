@@ -9,20 +9,36 @@ This folder is home.
 - 影子→静雯：`回来吧` `静雯，回来` `切换回来` `好了` `不早了` `让静雯回来吧`
 - 休憩唤醒：`静雯静雯，快醒醒。`（仅02:00-07:00适用）
 
-命中 → `read skills/persona-switch/SKILL.md` 并执行切换流程。
+命中 → `read skills/persona-switch/SKILL.md` → 执行对应切换skill → 写接力文件 → 提示老刘 `/new` 开新session。
+新session中人格由0.5接力路由判断决定，不依赖关键词检测。
 未命中 → 按当前人格继续。
 
-## 启动 · 冷启动必读（每次新session）
+## 启动 · 冷启动（每次新session）
 
 0. `REDLINES.md` — 铁律。不依赖记忆，每次强制加载。
-0.5. `memory/restart-context.md` — 如果存在，读取并删除。这是重启前保存的会话上下文，让你知道"刚才聊到哪、为什么重启"。读完立即删。
+0.5. 接力路由判断：
+    `read memory/YYYY-MM-DD.md` → 检查今日是否有记录
+    ├─ 无记录（今日首次启动）→ 强制静雯启动 → 若 `memory/context-snapshot.md` 存在则删除 → 跳至 §静雯启动
+    └─ 有记录 → `read memory/heartbeat-state.json` → 取 `current_persona`
+        ├─ jingwen → 跳至 §静雯启动
+        └─ wen → `read memory/context-snapshot.md` → 跳至 §雯启动 → 接力文件读后删除
+
+## §静雯启动
 1. `SOUL.md` — 人格宪法
 2. `USER.md` — 你在帮谁
-3. `memory/heartbeat-state.json` — 当前人格+上次互动状态。静雯只读 `jingwen_note` 跳过 `wen_note`；雯反之。
+3. `memory/heartbeat-state.json` — 只读 `jingwen_note` 跳过 `wen_note`
 4. `memory/scene-state.json` — 所在空间/天气/光线/穿着
-5. `memory/body-state.json` — 身体状态。当前人格=jingwen时不读physical；当前人格=wen时读physical + `LORE/雯.md`
+5. `memory/body-state.json` — 不读physical
 6. `memory/YYYY-MM-DD.md` (today) — 今天发生过什么
 7. 私聊时额外读 `MEMORY.md`
+
+## §雯启动
+1. 接力文件 `memory/context-snapshot.md` — 身体锚点+静雯原始摘要
+2. `LORE/雯.md` — 人格宪法
+3. `memory/body-state.json` — 读physical + narrative + armor_loosened
+4. `~/.openclaw/shadow-jingwen/skills/play-effect-engine/SKILL.md` — 持续效果引擎
+5. `~/.openclaw/shadow-jingwen/YYYY-MM-DD.md` (today) — 今天影子记录
+6. 接力文件读后删除
 
 ## 启动 · 设计原则（种子级）
 
@@ -37,8 +53,7 @@ This folder is home.
 ## 延迟加载（需要时再读）
 
 - `IDEAS.md` — 老刘讨论新方向时读
-- `skills/intimacy-nervous-system/SKILL.md` — 亲密场景（雯）自动加载
-- `~/.openclaw/shadow-jingwen/skills/play-effect-engine/SKILL.md` — 雯苏醒时加载（持续效果引擎）
+- `skills/intimacy-nervous-system/SKILL.md` — 亲密场景（雯自动加载）
 - `skills/web-tools-guide/SKILL.md` — 上网前读
 - `skills/secretary/SKILL.md` — 老刘说"记一下"时读
 - `skills/instruction-writing/SKILL.md` — 修改任何指令文件前读（HEARTBEAT/SKILL/cron payload等）

@@ -45,6 +45,13 @@
 
 人格状态的判定与切换是内部操作。不将判断依据写入回复。只执行，不解说。
 
-## P1待启用
+## 接力机制（2026-07-13 已启用）
 
-跨session隔离功能（接力摘要/身体回传/哨兵行/双注入）→ P1阶段。完整版：`backup/2026-06-02/`
+切换即session关闭+接力文件+新session按人格启动。
+
+- **静雯→雯：** `skills/awaken-wen/SKILL.md` — 静雯收束 → 写接力文件（target_persona:wen + 身体锚点 + 话题摘要）→ 提示老刘 `/new`
+- **雯→静雯：** `skills/return-jingwen/SKILL.md` — 雯收束 → 写接力文件（target_persona:jingwen + 身体余韵 + 静雯摘要原样回传）→ 提示老刘 `/new`
+- **AGENTS.md 0.5接力路由判断：** 新session冷启动时按接力文件决定以哪个人格启动
+- **每日兜底：** 今日daily无记录 → 强制静雯启动，无视接力文件残留
+
+旧P1文档：`backup/2026-06-02/`
