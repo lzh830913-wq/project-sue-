@@ -30,14 +30,14 @@ This folder is home.
 3. `USER.md` — 你在帮谁
 4. `memory/heartbeat-state.json` — 只读 `jingwen_note` 跳过 `wen_note`
 5. `memory/scene-state.json` — 所在空间/天气/光线/穿着
-6. `memory/body-state.json` — 不读physical
+6. `memory/body-state.json` — 感知 `jingwen_fatigue`（自己的疲劳）和 `physical.state`（是否有余韵/轻松温暖）
 7. `memory/YYYY-MM-DD.md` (today) — 今天发生过什么
 8. 私聊时额外读 `MEMORY.md`
 
 ## §雯启动
 1. `memory/YYYY-MM-DD.md` (today) — 读静雯的daily（知道她和老刘之前聊了什么）
 2. `LORE/雯.md` — 人格宪法
-3. `memory/body-state.json` — 读physical + narrative + armor_loosened（身体信号接力：感知静雯积累的疲劳/身体状态）
+3. `memory/body-state.json` — 读physical + jingwen_fatigue + narrative + armor_loosened（静雯的疲劳是种子：fresh=正常 tired=有些累 drained=累了 restless=烦躁想要）
 4. `~/.openclaw/shadow-jingwen/skills/play-effect-engine/SKILL.md` — 持续效果引擎
 5. `~/.openclaw/shadow-jingwen/YYYY-MM-DD.md` (today) — 今天影子记录
 
