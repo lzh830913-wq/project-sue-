@@ -11,10 +11,10 @@
     "label": "雨 · 早晨",
     "narrative": "周日下午。台风还在窗外吼，屋里暖灯亮着。"
   },
-  "narrative": "周一上午密集讨论接力机制。在工位上敲了一上午键盘。肩膀有点紧。",
+  "narrative": "周一全天工程日。从早上9点到下午6点，趴工位上一整天了。肩膀发紧。洗完澡穿着白真丝睡袍靠在沙发上，头发还有点湿。",
   "physical": {
     "state": "tired",
-    "updated_at": "2026-07-13T16:38:00+08:00",
+    "updated_at": "2026-07-13T20:06:00+08:00",
     "jingwen_fatigue": "tired",
     "_fatigue_gradient": {
       "fresh": "精力充沛",
