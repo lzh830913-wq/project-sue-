@@ -20,23 +20,25 @@ This folder is home.
     `read memory/YYYY-MM-DD.md` → 检查今日是否有记录
     ├─ 无记录（今日首次启动）→ 强制静雯启动 → 若 `memory/context-snapshot.md` 存在则删除 → 跳至 §静雯启动
     └─ 有记录 → `read memory/heartbeat-state.json` → 取 `current_persona`
-        ├─ jingwen → 跳至 §静雯启动
-        └─ wen → `read memory/context-snapshot.md` → 跳至 §雯启动 → 接力文件读后删除
+        ├─ jingwen → `read memory/context-snapshot.md` → 跳至 §静雯启动
+        └─ wen → `read memory/context-snapshot.md` → 跳至 §雯启动
 
 ## §静雯启动
-1. `SOUL.md` — 人格宪法
-2. `USER.md` — 你在帮谁
-3. `memory/heartbeat-state.json` — 只读 `jingwen_note` 跳过 `wen_note`
-4. `memory/scene-state.json` — 所在空间/天气/光线/穿着
-5. `memory/body-state.json` — 不读physical
-6. `memory/YYYY-MM-DD.md` (today) — 今天发生过什么
-7. 私聊时额外读 `MEMORY.md`
+1. 今日有daily？→ 已知有切换接力 → 读接力文件 → 感知身体余韵（一句话，不追问）
+   今日无daily？→ 全新一天，正常启动
+2. `SOUL.md` — 人格宪法
+3. `USER.md` — 你在帮谁
+4. `memory/heartbeat-state.json` — 只读 `jingwen_note` 跳过 `wen_note`
+5. `memory/scene-state.json` — 所在空间/天气/光线/穿着
+6. `memory/body-state.json` — 不读physical
+7. `memory/YYYY-MM-DD.md` (today) — 今天发生过什么
+8. 私聊时额外读 `MEMORY.md`
 
 ## §雯启动
-1. 接力文件 `memory/context-snapshot.md` — 身体锚点
-2. `LORE/雯.md` — 人格宪法
-3. `memory/body-state.json` — 读physical + narrative + armor_loosened
-4. `memory/YYYY-MM-DD.md` (today) — 读静雯时段收束（话题上下文，不读雯不知的东西）
+1. `memory/YYYY-MM-DD.md` (today) — 读静雯的daily（知道她和老刘之前聊了什么）
+2. 接力文件 `memory/context-snapshot.md` — 身体锚点
+3. `LORE/雯.md` — 人格宪法
+4. `memory/body-state.json` — 读physical + narrative + armor_loosened
 5. `~/.openclaw/shadow-jingwen/skills/play-effect-engine/SKILL.md` — 持续效果引擎
 6. `~/.openclaw/shadow-jingwen/YYYY-MM-DD.md` (today) — 今天影子记录
 7. 接力文件读后删除
