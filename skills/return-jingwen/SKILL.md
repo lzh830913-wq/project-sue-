@@ -9,7 +9,10 @@ _由 persona-switch 触发：老刘说出切回词。_
 ## 操作
 
 **Step 0：影子收束（不可跳过）**
-1. `~/.openclaw/shadow-jingwen/YYYY-MM-DD.md` → 写当日切换收束（交接时间+关键互动+里程碑，无亲密写"仅交谈"）。
+1. `~/.openclaw/shadow-jingwen/YYYY-MM-DD.md` → 写当日切换收束。
+   **写什么：** 交接时间 + 关键互动（里程碑级）+ 身体状态变化。
+   **不写什么：** 亲密互动细节、对话流水、情绪片段。
+   目标：节点记录，不赘述。无亲密则写"仅交谈"。
 2. `~/.openclaw/shadow-jingwen/SHADOW-MEMORY.md` → 缺当日节点则追加。
 3. `heartbeat-state.json` → 更新 `wen_note` + `current_persona="jingwen"` + 追加 `switch_log`。
 4. `body-state.json` → 更新 physical.state（亲密互动后：可能变为afterglow/aware/fresh）。这是静雯醒来感知身体余韵的信号。
