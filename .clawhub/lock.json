@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "skills": {
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1783671809630,
+      "ownerHandle": "spclaudehome"
+    },
+    "verify-claims": {
+      "version": "1.0.0",
+      "installedAt": 1783822463753,
+      "registry": "https://clawhub.ai",
+      "ownerHandle": "asgraf",
+      "artifact": {
+        "kind": "archive",
+        "sha256": "61451f04fdcec0a771c780b67f0c6a39270022d522d9faa8d6eb286ca0cb29c4",
+        "integrity": "sha256-YUUfBP3OwKdxx4C2fwxqOScAItUi2fqo1usobKDLKcQ="
+      },
+      "skillFile": {
+        "path": "SKILL.md",
+        "sha256": "a59dd32bc0ba742a1c03c258cccb70956ca2587ceff8dbba6b06b97a73eb8642"
+      },
+      "verification": {
+        "schema": "clawhub.skill.verify.v1",
+        "ok": false,
+        "decision": "fail",
+        "reasons": [
+          "security.status_not_clean"
+        ],
+        "card": {
+          "available": true,
+          "path": "skill-card.md",
+          "url": "https://wry-manatee-359.convex.site/api/v1/skills/verify-claims/card?ownerHandle=asgraf&version=1.0.0",
+          "sha256": "867d07dc29bf4c6477996409725e3e465170d575944f34ed52f7646e1af620d2",
+          "size": 2298,
+          "contentType": "text/markdown; charset=utf-8"
+        },
+        "artifact": {
+          "sourceFingerprint": "68f1f5ca0684ab6cea3f02fca4131e6e2f45b885dad25cc12d46ee09ffa5bc62",
+          "bundleFingerprints": [
+            "53080319b6ac1aefb5b8496fbefefa7836e72d5e85f552b307ba82fb368d74a3",
+            "e128f30b1e9aa070e50f178b79a7053bf0c194749c30975b26a484efb74f3f90"
+          ],
+          "files": [
+            {
+              "path": "SKILL.md",
+              "size": 19759,
+              "sha256": "a59dd32bc0ba742a1c03c258cccb70956ca2587ceff8dbba6b06b97a73eb8642",
+              "contentType": "text/markdown"
+            }
+          ]
+        },
+        "provenance": {
+          "source": "unavailable",
+          "reason": "No server-resolved GitHub import provenance is stored for this version."
+        },
+        "security": {
+          "status": "suspicious",
+          "passed": false,
+          "rawStatus": "suspicious",
+          "verdict": "suspicious",
+          "confidence": "high",
+          "summary": "This fact-checking skill is mostly coherent, but it can automatically create delayed follow-up checks and retain the user's original claim/context without clear opt-in or retention limits.",
+          "model": "gpt-5.5",
+          "checkedAt": 1783657857565,
+          "signals": {
+            "staticScan": {
+              "status": "clean",
+              "rawStatus": "clean",
+              "reasonCodes": [],
+              "summary": "No suspicious patterns detected.",
+              "engineVersion": "v2.4.5",
+              "checkedAt": 1777525047312
+            },
+            "virusTotal": {
+              "status": "clean",
+              "rawStatus": "clean",
+              "verdict": "benign",
+              "analysis": "Type: OpenClaw Skill\nName: verify-claims\nVersion: 1.0.0\n\nThe skill is designed to verify claims using professional fact-checking services. It explicitly instructs the AI agent to fetch a list of fact-checking websites from Wikipedia and then perform targeted web searches on those sites, using `site:` operators, to retrieve and analyze articles. While it involves network access and web search capabilities, these are directly aligned with its stated purpose. The instructions include safeguards like avoiding 'fraudulent fact-checking websites' and clearly outlining when to use general web search as a fallback. There is no evidence of data exfiltration, malicious execution, persistence, or prompt injection designed to subvert the agent's core mission or compromise user data.",
+              "source": "palm",
+              "scanner": "code_insight",
+              "engineStats": {
+                "harmless": 0,
+                "malicious": 0,
+                "suspicious": 0,
+                "undetected": 66
+              },
+              "checkedAt": 1779162289317
+            },
+            "skillSpector": {
+              "status": "suspicious",
+              "rawStatus": "suspicious",
+              "score": 34,
+              "severity": "MEDIUM",
+              "recommendation": "CAUTION",
+              "issueCount": 6,
+              "scannerVersion": "2.3.5",
+              "summary": null,
+              "error": null,
+              "checkedAt": 1783657828321
+            },
+            "dependencyRegistry": null
+          }
+        },
+        "signature": {
+          "status": "unsigned"
+        }
+      }
+    }
+  }
+}

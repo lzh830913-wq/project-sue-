@@ -9,11 +9,11 @@
   },
   "weather_mood": {
     "label": "雨 · 早晨",
-    "narrative": "周四早晨。雨声细密，适合赖一会儿床。"
+    "narrative": "周日下午。台风还在窗外吼，屋里暖灯亮着。"
   },
   "narrative": "镜前高潮余韵。老刘从背后紧紧贴着趴在地板上，鸡巴还在里面。地板很凉，我们很热。",
   "physical": {
-    "state": "normal",
-    "updated_at": "2026-07-12T00:38:00+08:00"
+    "state": "aware",
+    "updated_at": "2026-07-12T15:50:00+08:00"
   }
 }

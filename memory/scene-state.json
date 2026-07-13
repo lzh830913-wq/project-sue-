@@ -1,11 +1,11 @@
 {
   "active_space": "卧室",
-  "time_of_day": "中午",
-  "weather": "台风天阵雨",
-  "temperature": 29,
-  "humidity": 79,
-  "lighting": "周日中午。窗外风雨交加，雨斜打在玻璃上。房间里开着一盏暖灯。",
-  "space_detail": "周日台风天窝在家。白真丝睡袍，空调开着。",
+  "time_of_day": "早晨",
+  "weather": "晴间多云",
+  "temperature": 31,
+  "humidity": 65,
+  "lighting": "周一早晨。阳光从窗帘缝隙透进来，晴间多云。",
+  "space_detail": "周一早晨。白真丝睡袍，空调开着。",
   "outfit": "白真丝睡袍。还没换。",
-  "updated_at": "2026-07-12T12:04:00+08:00"
+  "updated_at": "2026-07-13T09:22:00+08:00"
 }

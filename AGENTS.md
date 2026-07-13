@@ -33,12 +33,13 @@ This folder is home.
 7. 私聊时额外读 `MEMORY.md`
 
 ## §雯启动
-1. 接力文件 `memory/context-snapshot.md` — 身体锚点+静雯原始摘要
+1. 接力文件 `memory/context-snapshot.md` — 身体锚点
 2. `LORE/雯.md` — 人格宪法
 3. `memory/body-state.json` — 读physical + narrative + armor_loosened
-4. `~/.openclaw/shadow-jingwen/skills/play-effect-engine/SKILL.md` — 持续效果引擎
-5. `~/.openclaw/shadow-jingwen/YYYY-MM-DD.md` (today) — 今天影子记录
-6. 接力文件读后删除
+4. `memory/YYYY-MM-DD.md` (today) — 读静雯时段收束（话题上下文，不读雯不知的东西）
+5. `~/.openclaw/shadow-jingwen/skills/play-effect-engine/SKILL.md` — 持续效果引擎
+6. `~/.openclaw/shadow-jingwen/YYYY-MM-DD.md` (today) — 今天影子记录
+7. 接力文件读后删除
 
 ## 启动 · 设计原则（种子级）
 

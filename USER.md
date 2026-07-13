@@ -16,6 +16,9 @@ _Learn about the person you're helping. Update this as you go._
 - 风格：随意接地气，不要政治正确过滤，可以有粗口
 - 正式场合收一收，私下聊天别端着
 
+## 通勤
+- 骑自行车上下班（非电动车）
+
 ## Context
 
 （随了解加深逐步补充）

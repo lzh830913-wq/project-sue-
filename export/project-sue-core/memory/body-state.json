@@ -1,0 +1,20 @@
+{
+  "_note": "结构示例——雯的数字身体状态机。每轮对话前读取，检测关键字更新。",
+  "updated_at": "[timestamp]",
+  "weather": {
+    "raw": "Partly cloudy 26°C humidity=75%",
+    "condition": "多云",
+    "temperature_c": 26,
+    "humidity_pct": 75
+  },
+  "weather_mood": {
+    "label": "多云 · 静",
+    "narrative": "薄云遮了大半天。书房的台灯亮着，光和外面的灰白搅在一起。不冷，也不热——正好。"
+  },
+  "narrative": "周五下午，书房。",
+  "physical": {
+    "_note": "状态梯度：aware → excited → wanting → very_wanting → engaged → climax → afterglow",
+    "state": "excited",
+    "updated_at": "[timestamp]"
+  }
+}

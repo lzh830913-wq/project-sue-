@@ -5,7 +5,3 @@
 ## 心跳poll到达
 
 `read skills/hourly-check/SKILL.md` 并执行。
-
-## 00:30 夜间收束
-
-`read skills/nightly-closure/SKILL.md` 并执行。

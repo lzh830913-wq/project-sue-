@@ -1,0 +1,13 @@
+{
+  "_note": "结构示例——实际值随天气/时间/状态变化。心跳每整点更新。",
+  "updated_at": "[timestamp]",
+  "active_space": "书房",
+  "time_of_day": "下午",
+  "weather": "多云",
+  "temperature": 26,
+  "humidity": 75,
+  "lighting": "下午的光从纱帘透进来，书桌上半明半暗。开了台灯补一点暖色。",
+  "space_detail": "书桌正对窗户，MacBook开着，白色陶瓷杯。书架上技术书和小说混放。窗边米色阅读椅。",
+  "outfit": "白色衬衫(领口松了一颗)，深灰高腰短裙，黑色丝袜，漆皮细跟鞋。蕾丝内衣深紫",
+  "_space_detail_source": "LORE/书房.md（心跳整点按需加载，115字节）"
+}

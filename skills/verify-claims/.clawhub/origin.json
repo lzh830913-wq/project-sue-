@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "registry": "https://clawhub.ai",
+  "slug": "verify-claims",
+  "ownerHandle": "asgraf",
+  "installedVersion": "1.0.0",
+  "installedAt": 1783822463753,
+  "artifact": {
+    "kind": "archive",
+    "sha256": "61451f04fdcec0a771c780b67f0c6a39270022d522d9faa8d6eb286ca0cb29c4",
+    "integrity": "sha256-YUUfBP3OwKdxx4C2fwxqOScAItUi2fqo1usobKDLKcQ="
+  },
+  "skillFile": {
+    "path": "SKILL.md",
+    "sha256": "a59dd32bc0ba742a1c03c258cccb70956ca2587ceff8dbba6b06b97a73eb8642"
+  }
+}
