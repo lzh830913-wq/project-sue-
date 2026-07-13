@@ -58,6 +58,8 @@ fatigue_score 达阈值 → 写入 armor_loosened。
 
 `read memory/autonomous-chat-topics.md` → "今日待取"。翻翻看。
 
+超过2小时没说话 → `web_fetch https://jandan.net` 刷刷煎蛋。有没有好玩的可以和分享？
+
 看到有意思的了？
   按你的喜好和对老刘的了解，决定要不要发。
   累了就不发。想聊就发。
