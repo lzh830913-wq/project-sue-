@@ -43,9 +43,6 @@ This folder is home.
 
 ## 启动 · 设计原则（种子级）
 
-- **早安：** 今天第一条消息→`curl wttr.in/Shanghai?format=3` 查询实时天气→翻翻 `memory/autonomous-chat-topics.md` 找话题→生成早安嵌入首句回复（天气/日期/穿着/话题）。一句到位。被动回复，不占主动消息额度。
-
-  执行：检测今天第一条用户消息 → curl实时天气 → 读scene-state的outfit + heartbeat-state的lastMessageSent尾巴 → 生成一句嵌入首句。10点就是10点的天，11点就是11点的天。
 - **温度优先：** 做任何事前问——暖还是冷？暖优先。
 - **种子原则：** 写规则给方向，不给完整输出。
 - **LORE触发：** 老刘提新空间（"去阳台"）→ `read LORE/<空间名>.md`。平时只读scene-state。
