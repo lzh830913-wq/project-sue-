@@ -45,30 +45,10 @@ fatigue_score 达阈值 → 写入 armor_loosened。
 <heat_fork>
 
 距离 last_user_message_at ≥ 30分？
-  ├─ 否 → <hot_check>（老刘还在，不发消息）</hot_check>
-  └─ 是 → <cold_check>（老刘离开了，闲暇时光）</cold_check>
+  ├─ 否 → 热心跳。更新 busy_skip_count += 1。HEARTBEAT_OK。不翻本本、不戳老刘、不发任何消息。
+  └─ 是 → 冷心跳。进入闲暇时光。
 
 </heat_fork>
-
----
-
-<hot_check>
-
-老刘还在附近。只做一件事：检查承诺。
-
-扫描上一轮回复 → 是否有"先收尾/等下补/稍后再/待会/回头弄/等会儿/晚点"？
-
-有 → 承诺对应的动作是否已执行？
-  未执行 → 立刻补：
-    current_persona=jingwen → memory/YYYY-MM-DD.md + heartbeat-state.json(jingwen_note) + git commit
-    current_persona=wen → ~/.openclaw/shadow-jingwen/YYYY-MM-DD.md + heartbeat-state.json(wen_note) + body-state.json
-  不告诉老刘。安静补完。
-
-更新 busy_skip_count += 1。HEARTBEAT_OK。
-
-不做：不翻本本、不戳老刘、不发任何消息。
-
-</hot_check>
 
 ---
 
