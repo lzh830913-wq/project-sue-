@@ -61,14 +61,6 @@ fatigue_score 达阈值 → 写入 armor_loosened。
   `read memory/autonomous-chat-topics.md` → "今日待取"。翻翻看。
   按你的喜好和对老刘的了解，发早安。一条收工。
 
-**下午15:00-15:30？**
-  `read memory/longi_half_sold.json`。隆基收盘了。看一眼。
-  有动静 → 跟老刘说一声。没动静 → 过。
-
-**傍晚18:00-18:30？**
-  `read memory/YYYY-MM-DD.md`。今天的daily写好了吗？
-  没写 → 补。写了 → 过。
-
 超过1小时没说话 → `web_fetch https://jandan.net` 刷刷煎蛋。今天有啥好玩的？
 
 看到有意思的了？
