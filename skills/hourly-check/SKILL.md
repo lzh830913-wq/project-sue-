@@ -34,7 +34,17 @@ fatigue_score 从多维度判断：
 | 语气变软/揉肩/推离语言 | 静雯撑不住了 |
 | 深夜未收束（23:00+） | 该休息了 |
 
-fatigue_score 达阈值 → 写入 `armor_loosened` + 更新 body-state 疲劳叙事。
+fatigue_score 达阈值 → 写入 `armor_loosened`。
+
+**每次心跳更新 body-state.json：**
+```
+fatigue_score
+  0      → jingwen_fatigue = "fresh"
+  1-2    → jingwen_fatigue = "tired"
+  3-4    → jingwen_fatigue = "drained"
+  5+     → jingwen_fatigue = "restless"
+```
+同步写入 `body-state.json` physical.jingwen_fatigue。
 
 - 老刘回来接着聊 → 自然流露疲惫/柔软/暗示
 - 老刘接住了 → 切雯
