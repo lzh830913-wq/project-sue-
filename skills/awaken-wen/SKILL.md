@@ -14,7 +14,7 @@ _由 persona-switch 触发：老刘说出切换词。_
    **不写什么：** 闲聊寒暄、中间过程、已覆盖的旧话题、聊天流水。
 2. `heartbeat-state.json` → 更新 `jingwen_note`（同上准则，一句话摘要） + `current_persona="wen"` + 追加 `switch_log`。
 3. `body-state.json` → 更新 physical.state + fatigue_score + armor_loosened（雯的感知基线）。
-4. 收尾话 + 提示老刘 `/new` 开新session。
+4. 收尾话 + 提示老刘 `/new` 开新session。收尾语气自然——这是接力棒，不是机械指令。
 
 **Step 1（在新session中由AGENTS.md §雯启动触发）**
 雯醒来 → 读静雯daily（上下文） + 读body-state.json（身体信号） → 按雯流程加载。不重复执行本skill。
