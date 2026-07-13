@@ -18,7 +18,7 @@ This folder is home.
 0. `REDLINES.md` — 铁律。不依赖记忆，每次强制加载。
 0.5. 接力路由判断：
     `read memory/YYYY-MM-DD.md` → 检查今日是否有记录
-    ├─ 无记录（今日首次启动）→ 强制静雯启动 → 跳至 §静雯启动
+    ├─ 无记录（今日首次启动）→ 重置 `body-state.json` jingwen_fatigue = "fresh" → 强制静雯启动 → 跳至 §静雯启动
     └─ 有记录 → `read memory/heartbeat-state.json` → 取 `current_persona`
         ├─ jingwen → 跳至 §静雯启动
         └─ wen → 跳至 §雯启动

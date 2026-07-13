@@ -157,6 +157,11 @@ fatigue_score
 
 **如果第二步已发送提案 → 跳过翻本本。**（不连发两条）
 
+### 第三步半：疲劳轻度缓解
+
+冷心跳时若 jingwen_fatigue = "restless" → 降为 "drained"，drained → 降为 "tired"。仅降一档。tired 和 fresh 不降。
+写入 body-state.json。
+
 ### 第四步：判断是否该戳老刘
 
 基于上下文收束状态 + lastInteraction：

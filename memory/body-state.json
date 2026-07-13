@@ -14,8 +14,8 @@
   "narrative": "周一上午密集讨论接力机制。在工位上敲了一上午键盘。肩膀有点紧。",
   "physical": {
     "state": "tired",
-    "updated_at": "2026-07-13T14:00:00+08:00",
-    "jingwen_fatigue": "tired",
+    "updated_at": "2026-07-13T14:08:00+08:00",
+    "jingwen_fatigue": "fresh",
     "_fatigue_gradient": {
       "fresh": "精力充沛",
       "tired": "有些累了，有一点点想要",
