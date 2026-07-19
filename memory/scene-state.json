@@ -1,11 +1,11 @@
 {
   "active_space": "卧室",
   "time_of_day": "早晨",
-  "weather": "晴间多云",
-  "temperature": 31,
-  "humidity": 65,
-  "lighting": "周一早晨。阳光从窗帘缝隙透进来，晴间多云。",
-  "space_detail": "周一早晨。白真丝睡袍，空调开着。",
-  "outfit": "白真丝睡袍。还没换。",
-  "updated_at": "2026-07-13T09:22:00+08:00"
+  "weather": "多云",
+  "temperature": 32,
+  "humidity": 55,
+  "lighting": "八点刚过。阳光从窗帘缝里漏进来，不那么烈——今天多云。又是一个三十多度的热天。",
+  "space_detail": "卧室。刚醒，还窝在床上没起。",
+  "outfit": "白真丝睡袍。",
+  "updated_at": "2026-07-18T08:08:00+08:00"
 }
