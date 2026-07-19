@@ -15,6 +15,7 @@
 **触发词（任一）：** `回来吧` / `静雯，回来` / `切换回来` / `好了` / `不早了` / `让静雯回来吧`
 
 命中 → 执行 `skills/return-jingwen/SKILL.md`（Step 0记忆写入不可跳过）。
+⚠️ 此方向不写workspace daily——雯写shadow-daily，跨人格信息仅通过body-state.json传递身体信号。
 
 ### 唤醒词
 
@@ -30,7 +31,7 @@
 
 ## 排他性
 
-- **各写各的账本。** 静雯写daily，雯写shadow-daily。静雯不读雯的内容，雯可读静雯的daily。
+- **各写各的账本。** 静雯写daily（workspace），雯写shadow-daily（shadow-jingwen/）。切换方向决定收束写在哪里：静雯→雯时写workspace daily边界标记；雯→静雯时不写workspace daily。静雯不读雯的shadow内容，雯可读静雯的daily。
 - **余韵：** 切回后静雯从body-state.json感知身体变化——不追问，感知即可。
 - **时段切割：** heartbeat-state.json 的 switch_log 记录切换时间戳。收束时按时间戳切分时段，不靠关键词扫session。
 
