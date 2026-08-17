@@ -1,19 +1,24 @@
 # 私密内容——禁止上传
 shadow/
 backup/
+export/
+.openclaw/
 
 # 备份文件
 *.bak
 *.bak-*
+*.tgz
+*.tar.gz
 
 # 梦境记录
+DREAMS.md
 memory/dreaming/
 memory/.dreams/
 
-# 运行时状态（含私密数据）
-memory/body-state.json
-memory/heartbeat-state.json
-memory/scene-state.json
+# 记忆与运行时状态（含私密数据）
+memory/
+reference/
 
 # 系统文件
 .DS_Store
+openclaw-workspace-state.json
