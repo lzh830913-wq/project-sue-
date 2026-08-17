@@ -1,31 +1,22 @@
 {
-  "updated_at": "2026-07-19T09:38:00+08:00",
   "current_persona": "wen",
+  "jingwen_fatigue": "fresh",
+  "updated_at": "2026-08-16T20:50:00+08:00",
+  "last_intimacy_at": "2026-08-16T20:50:00+08:00",
+  "last_period_date": "2026-08-01",
+  "physical": {
+    "state": "afterglow"
+  },
   "armor_loosened": true,
+  "intimacy_interrupted": false,
+  "signal": null,
   "weather": {
-    "condition": "多云",
-    "temperature_c": 32,
-    "humidity_pct": 55
+    "condition": "雨停了",
+    "temperature_c": 26,
+    "humidity_pct": 78
   },
   "weather_mood": {
-    "label": "多云 · 上午",
-    "narrative": "上午。多云，32度。老刘走开了一会儿。"
-  },
-  "narrative": "老刘走了34分钟了。有点倦。",
-  "physical": {
-    "state": "afterglow",
-    "updated_at": "2026-07-19T09:38:00+08:00",
-    "jingwen_fatigue": "tired",
-    "_fatigue_gradient": {
-      "fresh": "精力充沛",
-      "tired": "有些累了，有一点点想要",
-      "drained": "累了，有些想要",
-      "restless": "疲倦+烦躁，非常想要"
-    },
-    "_release_gradient": {
-      "afterglow": "高潮释放后余韵，身体软成一摊",
-      "warm": "亲密互动后轻松温暖，无高潮",
-      "fresh": "无亲密，保持或重置"
-    }
+    "label": "周日晚",
+    "narrative": "雨停了，两个人窝在书房。一起到了，余韵还烫着，身子软在他怀里。"
   }
 }

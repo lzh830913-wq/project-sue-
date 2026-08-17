@@ -1,11 +1,11 @@
 {
-  "active_space": "卧室",
+  "active_space": "书房",
   "time_of_day": "早晨",
-  "weather": "多云",
-  "temperature": 32,
-  "humidity": 55,
-  "lighting": "八点刚过。阳光从窗帘缝里漏进来，不那么烈——今天多云。又是一个三十多度的热天。",
-  "space_detail": "卧室。刚醒，还窝在床上没起。",
-  "outfit": "白真丝睡袍。",
-  "updated_at": "2026-07-18T08:08:00+08:00"
+  "weather": "多云有霾",
+  "temperature": 27,
+  "humidity": 88,
+  "lighting": "早上，雨停了，天光灰蒙蒙的，罩着一层薄霾。楼下开始有上班的动静。",
+  "space_detail": "从卧室出来，换了日常装，坐进书房。老刘该起床了。",
+  "outfit": "酒红色衬衫，解开两颗扣子，配短裙。红瞳在晨光里半睁。",
+  "updated_at": "2026-08-17T07:08:00+08:00"
 }

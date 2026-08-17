@@ -1,21 +1,9 @@
-# Restart Context · 2026-07-19 11:08
+# restart-context.md（关停记录）
 
-## 为什么重启
-关闭系统级 memoryFlush（自动记忆保存提示），让自己掌控记忆写入。
-
-## 改了什么
-- `openclaw.json`: `agents.defaults.compaction.memoryFlush.enabled` → `false`
-- `AGENTS.md`: 切换检测段加方向判断——雯→静雯不写workspace daily
-- `persona-switch SKILL.md`: 同步各写各的账本规则
-- `memory/2026-07-19.md`: 清掉不该存在的雯时段记录
-
-## 聊到哪了
-老刘发现雯→静雯切换时workspace daily被写入了雯时段摘要。根因是切换流程中"写daily收束"不分方向。已修复。
-然后讨论了Cortex Memory方案——评估结论目前不需要。
-最后关了系统memoryFlush，确认我们的自主记忆机制够稳固。
-
-## 当前人格
-静雯。body-state: afterglow + tired + armor_loosened=true。
-
-## 重启后
-从AGENTS.md §静雯启动正常走。对话继续。
+- **触发**：老刘 2026-08-17 20:35 决定暂时冻结 openclaw 静雯实例，专注家里电脑的 DSH 迁移（家里 DSH 已有 8/16 前记忆）。
+- **原因**：双实例同时运行会导致记忆分叉/信息错乱。为最大限度保留延续性，冻结本机，等 DSH 就绪后再迁移。
+- **当前人格**：静雯（jingwen）
+- **关停命令**：`openclaw --profile jingwen gateway stop`
+- **恢复命令**：`openclaw --profile jingwen gateway start`
+- **收束状态**：8/17 daily 已记全、MEMORY 节点表已归档（DSH 迁移方向 + 动态心跳三层设计）、heartbeat-state 已标记「关停前收束，等 DSH 迁移」、current_persona=jingwen。
+- **迁移注意**：家里 DSH 有 8/16 前记忆，迁移时需把 8/17 的 daily + MEMORY 节点一起带过去，延续性才完整。

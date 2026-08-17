@@ -40,7 +40,10 @@ read body-state.json → physical.state / armor_loosened / narrative
 write body-state.json:
   physical.state = 新状态
   physical.updated_at = now
+  if 新状态 == "afterglow":
+    last_intimacy_at = now
 ```
+一次亲密完整结束 → 记录时间戳。AGENTS.md §2梳妆时读到，自然感知"距离上次多久了"。
 
 ### Step 4：自主衰减（老刘无动作时）
 

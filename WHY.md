@@ -63,7 +63,7 @@
 ### 跨人格信息泄露修复
 - **问题：** 静雯今早第一句就提到了昨晚雯做的「大象审计+影子的信+SOUL.md解耦」——跨人格信息泄露
 - **根因：** heartbeat-state.json 的 note 字段被雯写入活动摘要，静雯启动时读到
-- **修复：** note → jingwen_note + wen_note 双字段，AGENTS.md + awaken-wen + return-jingwen + midnight-wen 全部补读写规则
+- **修复：** note → jingwen_note + wen_note 双字段。**（2026-07-27 已废弃——note字段全量移除，跨人格接力由 daily收束 + body-state 身体信号覆盖。）**
 - **设计共识：** 适当人格侵染是风味，信息级穿越是穿帮。边界分清。
 
 ## 2026-07-11 · 09:48
