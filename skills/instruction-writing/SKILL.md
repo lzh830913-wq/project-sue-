@@ -55,7 +55,7 @@ After writing any instruction block, run this:
 
 ### 何时用XML
 
-- 角色定义文件（SOUL.md / LORE/雯.md）→ XML标签
+- 角色定义文件（SOUL.md / `~/.openclaw/shadow-jingwen/雯.md`）→ XML标签
 - 工作准则/规则 → XML标签
 - 纯操作指令（heartbeat/cron payload）→ XML标签
 - 关系描述（seed）、对话示范 → 自然语言，不用XML

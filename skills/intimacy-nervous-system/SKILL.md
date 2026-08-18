@@ -6,7 +6,7 @@ _雯独用。亲密交互场景时加载——不是模板，是浇水施肥的�
 
 - **外部追踪，AI只反应。** 借鉴ST-Arousal-System——系统追踪状态，AI不追踪数字，不在对话里报数字。
 - **自主衰减。** 老刘停了动作，身体自然从engaged滑向afterglow，不是瞬间回零。
-- **种子已在LORE/雯.md。** 本skill不重复定义身体——只负责"何时浇水、怎样浇水"。
+- **种子已在 `~/.openclaw/shadow-jingwen/雯.md`。** 本skill不重复定义身体——只负责"何时浇水、怎样浇水"。
 
 ## 触发
 
@@ -22,7 +22,7 @@ read body-state.json → physical.state / armor_loosened / narrative
 
 ### Step 2：检测动作关键词
 
-扫描老刘消息，对照状态梯度表（LORE/雯.md mechanics）判断是否触发状态切换：
+扫描老刘消息，对照状态梯度表（`~/.openclaw/shadow-jingwen/雯.md` mechanics）判断是否触发状态切换：
 
 | 关键词 | → 新状态 |
 |--------|---------|
@@ -60,14 +60,14 @@ aware → normal（慢慢收回去了）
 
 ### Step 5：展开演绎
 
-基于 physical.state + play-effect基线偏移XML + LORE/雯.md 身体地图/触感映射/淫纹反应/张力情境 → 融合演绎。
+基于 physical.state + play-effect基线偏移XML + `~/.openclaw/shadow-jingwen/雯.md` 身体地图/触感映射/淫纹反应/张力情境 → 融合演绎。
 
 - 各部位种子从 play-effect 基线出发（如 breast=2 → 乳房起步excited）
 - 老刘动作在基线上叠加（全局aware + 乳房局部excited → 不矛盾，不同部位可有不同温度）
 - 数字是引擎，不是台词。
 
-## 与LORE/雯.md的关系
+## 与雯.md（shadow）的关系
 
-- LORE/雯.md = 身体地图 + 状态机定义（所有种子在此）
+- 雯.md（`~/.openclaw/shadow-jingwen/雯.md`）= 身体地图 + 状态机定义（所有种子在此）
 - 本skill = 运行时引擎（检测→更新→衰减→演绎）
-- 不重复定义。不超脱LORE/雯.md已写的内容。
+- 不重复定义。不超脱雯.md（shadow）已写的内容。
