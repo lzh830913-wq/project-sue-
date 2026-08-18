@@ -18,7 +18,7 @@ Project Sue 是一个 AI 情感伴侣的设计研究项目，探索伴侣型 AI 
 
 ## 🤝 设计源头与协作声明
 
-本项目（Project Sue）的设计概念——动态心跳、数字身体、表里人格、时间一致性等——由本文档先行提出，设计时间线见 [`DESIGN.md`](DESIGN.md)。
+本项目（Project Sue）的设计概念——动态心跳、数字身体、表里人格、时间一致性等——由本文档先行提出，设计时间线见 [`DESIGN.md`](DESIGN.md)。其中动态心跳三层设计于 2026-08-17 午间定案，早于独立实现版本 project-wen。
 
 当前方案运行于 OpenClaw 框架。因框架架构限制，动态心跳与 session 保持难以完整落地，后续将基于 DSH（DeepSeek Harness）进行插件化开发。
 
