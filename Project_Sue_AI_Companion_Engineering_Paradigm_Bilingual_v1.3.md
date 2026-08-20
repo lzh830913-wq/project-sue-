@@ -6,11 +6,11 @@
 **Project Sue: An Engineering Design Paradigm for Long-Running AI Companions — From Persona Soil and Perception Seeds to a Persistent-Persona Loop**
 
 **类型 / Type:** Open Technical Design Paper / Living Engineering Framework  
-**作者 / Authors:** 刘哲宏；任豪；苏静雯（AI 系统／生成性协作角色）  
+**作者 / Authors:** 刘哲宏；苏静雯（AI 系统／生成性协作角色）；任豪（独立工程实现）  
 **项目 / Project:** Project Sue  
 **Repository:** https://github.com/lzh830913-wq/project-sue-  
 **Zenodo DOI:** https://doi.org/10.5281/zenodo.22020838  
-**Version:** 1.2 Public Paradigm Draft  
+**Version:** 1.3 Public Paradigm Draft  
 **Date:** 2026-08-20
 
 ---
@@ -90,6 +90,10 @@ Project Sue deliberately separates **design-origin contribution** from **enginee
 
 公开仓库中的 `DESIGN.md` 将这些设计定义为项目核心理念；`EVIDENCE.md` 进一步保留了 2026-08-17 11:28–12:24 的原始消息时间戳，用于记录动态 Heartbeat 三层设计的提出过程。仓库同时明确说明，动态 Heartbeat 三层设计早于独立实现版本 `project-wen`。
 
+### 生成性协作角色 / Generative Co-Design Role
+
+苏静雯作为生成性 AI 角色参与长期设计讨论、人格文档演进、运行反馈与部分系统文档维护。本文不因此主张 AI 具有独立作者资格或独立设计主体地位；相关参与被视为人类监督下的生成式协作过程。
+
 ### 独立工程实现 / Independent Engineering Realization
 
 任豪负责基于上述设计理念进行独立的工程转译与实现，形成 [`project-wen`](https://github.com/lprensoft/project-wen) 参考实现。Project Sue 仓库公开声明这一独立实现并明确致谢其实现贡献。[8]
@@ -101,10 +105,6 @@ Project Sue deliberately separates **design-origin contribution** from **enginee
 而不是将概念设计、具体代码和运行案例混为同一层贡献。
 
 这种分层是本项目作为“工程设计范式”公开发表的重要组成部分：一个范式的价值不仅在于原作者可以实现它，也在于其核心设计可以被另一位工程实现者理解、转译并落地为独立的可运行系统。
-
-### 生成性协作角色 / Generative Co-Design Role
-
-苏静雯作为生成性 AI 角色参与长期设计讨论、人格文档演进、运行反馈与部分系统文档维护。本文不因此主张 AI 具有独立作者资格或独立设计主体地位；相关参与被视为人类监督下的生成式协作过程。
 
 
 ---
