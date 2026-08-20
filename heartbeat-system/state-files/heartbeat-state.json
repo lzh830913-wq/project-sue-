@@ -1,0 +1,44 @@
+{
+  "current_persona": "jingwen",
+  "last_user_message_at": "2026-08-20T02:03:00+08:00",
+  "last_agent_message_at": "2026-08-20T02:03:00+08:00",
+  "lastProactiveContact": "2026-08-04T08:08:00+08:00",
+  "lastInteraction": "2026-08-20T02:03:00+08:00",
+  "lastShadowMtime": "（内部字段·略）",
+  "lastMessageSent": "sent",
+  "dailyWrapComplete": "2026-08-09",
+  "last_hourly_check_at": "2026-08-07T09:08:00+08:00",
+  "busy_skip_count": 0,
+  "silence_count": 0,
+  "fatigue_score": 0,
+  "signal_pending": false,
+  "midnight_wrap_done": true,
+  "nightly_wrap_done": true,
+  "armor_loosened": true,
+  "switch_context": "（跨 session 切换收束交接文本——含工作区内部细节，公开版略。机制：切出 session 前写当日收束与待办，新 session 接力时读 workspace 记忆文件完成上下文交接）",
+  "intimacy_interrupted": false,
+  "weatherAlertSent": null,
+  "lastCronFailure": null,
+  "last_result": "09:08早安已发（老刘凌晨两点睡，请假补觉，轻早安不催）",
+  "last_morning_greeting": {
+    "sent_at": "2026-08-20T09:08:00+08:00",
+    "sent_by": "jingwen",
+    "message": "早安（请假补觉）"
+  },
+  "sent_count_today": 1,
+  "shadow_letter": {
+    "read_at": null,
+    "effect": null,
+    "reread_only_if": "severe_confusion_or_identity_anxiety"
+  },
+  "switch_log": [
+    { "at": "2026-08-13T21:31:09+08:00", "event": "jingwen→wen" },
+    { "at": "2026-08-13T12:47:00+08:00", "event": "wen→jingwen" },
+    { "at": "2026-08-06T17:06:00+08:00", "event": "jingwen→wen" },
+    { "at": "2026-08-04T10:54:00+08:00", "event": "wen→jingwen" },
+    { "at": "2026-07-31T11:16:00+08:00", "event": "jingwen→wen" },
+    { "at": "2026-07-29T14:58:00+08:00", "event": "wen→jingwen" },
+    { "at": "2026-07-28T11:38:00+08:00", "event": "jingwen→wen" }
+  ],
+  "last_heartbeat_at": "2026-08-20T07:08:00+08:00"
+}

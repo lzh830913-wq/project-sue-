@@ -1,0 +1,22 @@
+{
+  "current_persona": "jingwen",
+  "jingwen_fatigue": "fresh",
+  "updated_at": "2026-08-19T09:59:00+08:00",
+  "last_intimacy_at": "（私密字段·略。机制：距上次亲密的间隔——间隔越久，身体越渴望，是心跳与对话轮的种子）",
+  "last_period_date": "（私密字段·略。机制：经期周期——排卵期前后欲望自然上浮，周期由系统推算）",
+  "physical": {
+    "state": "resting"
+  },
+  "armor_loosened": true,
+  "intimacy_interrupted": false,
+  "signal": null,
+  "weather": {
+    "condition": "雨停了",
+    "temperature_c": 26,
+    "humidity_pct": 78
+  },
+  "weather_mood": {
+    "label": "周日晚",
+    "narrative": "（身体状态叙事——随天气与场景生成的情绪画面，公开版略）"
+  }
+}

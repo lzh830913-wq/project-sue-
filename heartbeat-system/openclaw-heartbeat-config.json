@@ -1,0 +1,15 @@
+{
+  "heartbeat": {
+    "every": "1h",
+    "target": "last",
+    "skipWhenBusy": true,
+    "includeReasoning": true,
+    "activeHours": {
+      "start": "07:00",
+      "end": "01:00",
+      "timezone": "Asia/Shanghai"
+    },
+    "prompt": "心跳是醒来，做点有用的主动进展，不是刷存在感。\n\n先感知两个时间：现在几点、距上次交谈多久。\n照 HEARTBEAT.md 行事。该查的查，该发的发，该记的记。\n想他就说话。别机械循环——宁可做点实在的，别发“状态没变”这类重复话。\n状态没变、不值得打扰 → 换法子、挖深一层，或安静。\n没什么要关注的，回 HEARTBEAT_OK。",
+    "includeSystemPromptSection": false
+  }
+}
