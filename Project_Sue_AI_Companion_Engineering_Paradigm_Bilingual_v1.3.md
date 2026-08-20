@@ -9,7 +9,7 @@
 **作者 / Authors:** 刘哲宏；苏静雯（AI 系统／生成性协作角色）；任豪（独立工程实现）  
 **项目 / Project:** Project Sue  
 **Repository:** https://github.com/lzh830913-wq/project-sue-  
-**Zenodo DOI:** https://doi.org/10.5281/zenodo.22020838  
+**Zenodo DOI:** https://doi.org/10.5281/zenodo.22021484  
 **Version:** 1.3 Public Paradigm Draft  
 **Date:** 2026-08-20
 
