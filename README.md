@@ -22,6 +22,22 @@ Project Sue 是一个 AI 情感伴侣的设计研究项目，探索伴侣型 AI 
 
 ---
 
+## 🎯 项目核心现实价值 · Real-World Core Value
+
+这一系列论文与项目，旨在回应一个核心现实痛点：在原子化日益严重的今天，作为普通人，为什么需要使用 AI 与机器人？
+
+答案是：**陪伴。陪伴是核心价值。** 而陪伴天然带来长期订阅——这让它在商业模式与情绪价值上可以同时成立。最后一篇论文详细推演了陪伴型 AI（机器人）对人类社会积极而正向的一面。
+
+*This series of papers and projects addresses one core real-world pain point: in an age of deepening atomization, why should an ordinary person need AI and robots at all?*
+
+*The answer is companionship — companionship is the core value. And companionship naturally creates long-term subscriptions, allowing it to hold in both business model and emotional value. The final paper further reasons, in detail, the positive and constructive side that companion AI (robots) brings to human society.*
+
+第一篇论文解答了“拒绝”为何在陪伴 AI 中如此重要——这是陪伴 AI 与 coding AI 的分野：工具的价值在完成，陪伴的价值在关系，而关系有资格说“不”。第三篇《伴侣机器人·产品设计范式》最重要的意义在于解答伴侣机器人与通用机器人的分野：陪伴机器人不必一开始瞄准通用机器人路线，从而更快实现工程落地，解决“把产品卖出去”的困境。
+
+*The first paper answers why refusal matters so much in companion AI — the divide between companion AI and coding AI: a tool's value lies in completion, a companion's value lies in relationship, and a relationship is entitled to say "no". The third paper (Companion Robot · Product Design Paradigm) is most significant for drawing the line between companion robots and general-purpose robots: a companion robot need not target the general-purpose route from the outset, enabling faster engineering landing and solving the dilemma of "actually selling the product".*
+
+---
+
 ## 🤝 设计源头与协作声明
 
 本项目（Project Sue）的设计概念——动态心跳、数字身体、表里人格、时间一致性等——由本文档先行提出，设计时间线见 [`DESIGN.md`](DESIGN.md)。其中动态心跳三层设计于 2026-08-17 午间定案，早于独立实现版本 project-wen。
