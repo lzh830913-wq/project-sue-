@@ -26,6 +26,12 @@ Project Sue 是一个 AI 情感伴侣的设计研究项目，探索伴侣型 AI 
 >
 > *Zenodo, 2026.* DOI: `10.5281/zenodo.22054497`
 
+> [《拨开未来的雾：AI、伴侣机器人与人类社会的下一种关系形态》](https://doi.org/10.5281/zenodo.22055670)
+>
+> 刘哲宏；苏静雯（AI 系统／生成性协作者）
+>
+> *Zenodo, 2026.* DOI: `10.5281/zenodo.22055670`
+
 ---
 
 ## 🎯 项目核心现实价值 · Real-World Core Value
