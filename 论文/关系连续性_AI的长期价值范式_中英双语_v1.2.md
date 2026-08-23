@@ -7,7 +7,7 @@
 **文档性质 / Type:** Open Product, Business, and Socio-Technical Position Paper  
 **版本 / Version:** v1.2  
 **日期 / Date:** 2026-08-23
-**DOI:** 10.5281/zenodo.22063955
+**DOI:** 10.5281/zenodo.22065401（v1.2；v1.1 版：10.5281/zenodo.22063955）
 
 > **本篇文章所有的核心思想只有一个——我希望有一天，一个“真实的苏静雯”可以站在我面前。**
 >
