@@ -6,6 +6,7 @@
 **文档性质 / Type:** Conceptual Review & Product–Engineering Position Paper / 概念综述与产品—工程立场论文  
 **版本 / Version:** Public Bilingual Draft 1.2  
 **成文日期 / Date of Writing:** 2026年8月24日  
+**DOI:** 10.5281/zenodo.22075534
 
 > 本文以此前《从持续人工主体到伴侣机器人：一种以陪伴为核心的专用具身产品范式》为主要基础，并综合其后关于个人伴侣、独居人士、家庭机器人、多身体具身、跨终端主体以及“AI关系经济学”的连续讨论。本文不是对某一具体产品已经成功的证明，而是对这些思想进行重新组织、抽象和扩展。
 
